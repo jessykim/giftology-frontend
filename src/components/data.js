@@ -6,4 +6,4 @@ const wishlists = [
   }
 ]
 
-export default wishlists
+export {wishlists}

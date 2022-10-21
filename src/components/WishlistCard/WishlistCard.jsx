@@ -9,6 +9,12 @@ const WishlistCard = ({ wishlist }) => {
   return (
     <>
       <h2>Wishlist #1</h2>
+      <h2>
+        {wishlist.name}
+      </h2>
+      <p>
+        {wishlist.description}
+      </p>
       {/* <Link to={`/wishlists/${wishlist._id}`}>
         <article className={styles.container}>
           <header>
