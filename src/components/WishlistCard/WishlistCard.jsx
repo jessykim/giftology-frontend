@@ -8,24 +8,16 @@ import styles from './WishlistCard.module.css'
 const WishlistCard = ({ wishlist }) => {
   return (
     <>
-      <h2>Wishlist #1</h2>
-      <h2>
-        {wishlist.name}
-      </h2>
-      <p>
-        {wishlist.description}
-      </p>
-      {/* <Link to={`/wishlists/${wishlist._id}`}>
+      <Link to={`/wishlists/1`}>
         <article className={styles.container}>
-          <header>
-            <span>
-              <Icon category={blog.category} />
-            </span>
-            <AuthorInfo content={blog} />
-          </header>
-          <p>{wishlist.description}</p>
+          <h2>
+            {wishlist.name}
+          </h2>
+          <p>
+            {wishlist.description}
+          </p>
         </article>
-      </Link> */}
+      </Link>
     </>
   )
 }
