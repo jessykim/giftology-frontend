@@ -1,13 +1,11 @@
 import { useState } from "react"
+import { useLocation } from "react-router-dom"
 import styles from './NewWishlist.module.css'
 import WishlistForm from '../../components/WishlistForm/WishlistForm'
 
-const NewWishlist = (props) => {
-  const [wishlistForm, setWishlistForm] = useState({
-    name: '',
-    description: '',
-    items: [],
-  })
+const EditWishlist = (props) => {
+  const { state } = useLocation()
+  const [wishlistForm, setWishlistForm] = useState(state)
 
   const handleChange = ({ target }) => {
     setWishlistForm({ ...wishlistForm, [target.name]: target.value })
@@ -15,7 +13,7 @@ const NewWishlist = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-		// props.handleAddWishlist(form)
+		// props.handleUpdateWishlist(wishlistForm)
   }
 
   return (
@@ -25,4 +23,4 @@ const NewWishlist = (props) => {
   )
 }
 
-export default NewWishlist
+export default EditWishlist

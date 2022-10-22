@@ -8,8 +8,9 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
-import WishlistIndex from './pages/WishlistIndex/WishlistIndex'
+// import WishlistIndex from './pages/WishlistIndex/WishlistIndex'
 import NewWishlist from './pages/NewWishlist/NewWishlist'
+import WishlistDetails from './pages/WishlistDetails/WishlistDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -57,10 +58,10 @@ const App = () => {
           }
         />
         <Route
-          path="/wishlists"
+          path="/wishlists/1"
           element={
             <ProtectedRoute user={user}>
-              <WishlistIndex />
+              <WishlistDetails />
             </ProtectedRoute>
           }
         />
