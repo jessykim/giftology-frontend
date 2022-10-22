@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useLocation } from "react-router-dom"
-import styles from './NewWishlist.module.css'
+import styles from './EditWishlist.module.css'
 import WishlistForm from '../../components/WishlistForm/WishlistForm'
 
 const EditWishlist = (props) => {

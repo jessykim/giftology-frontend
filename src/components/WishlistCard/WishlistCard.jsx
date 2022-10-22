@@ -18,6 +18,10 @@ const WishlistCard = ({ wishlist }) => {
           </p>
         </article>
       </Link>
+      <Link to="/wishlist/1/edit">
+        <button>Edit</button>
+      </Link>
+      <button>Delete</button>
     </>
   )
 }
