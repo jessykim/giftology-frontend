@@ -38,6 +38,9 @@ const WishlistDetails = (props) => {
         <header>
           <h1>{wishlist.name}</h1>
           <p>{wishlist.description}</p>
+          <Link to="/wishlists/1/new">
+            <button>Add Item</button>
+          </Link>
         </header>
         <div>
           {wishlist.items.map((item, idx) => (

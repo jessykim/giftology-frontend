@@ -6,6 +6,11 @@ import styles from './ItemCard.module.css'
 // import AuthorInfo from "../AuthorInfo/AuthorInfo"
 
 const ItemCard = ({ item }) => {
+  const handleChange = ({ target }) => {
+    console.log(target)
+    // setForm({ ...form, [target.name]: target.value })
+  }
+
   return (
     <>
       <article className={styles.container}>
@@ -21,6 +26,10 @@ const ItemCard = ({ item }) => {
         <label htmlFor="purchased-input">Purchased</label>
         <input type="checkbox" id="purchased-input" />
       </article>
+      {/* <Link to="/wishlist/1/edit-item">
+        <button onClick={() => handleChange()}>Edit</button>
+      </Link> */}
+      <button>Delete</button>
     </>
   )
 }
