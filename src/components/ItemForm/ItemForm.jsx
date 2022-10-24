@@ -1,6 +1,8 @@
-const ItemForm = (props) => {  
-  return ( 
-    <>
+import styles from "./ItemForm.module.css"
+
+const ItemForm = (props) => {
+  return (
+    <div className={styles.container}>
       <form onSubmit={props.handleSubmit}>
         <label htmlFor="name-input">Name</label>
         <input
@@ -13,7 +15,7 @@ const ItemForm = (props) => {
           onChange={props.handleChange}
         />
         <label htmlFor="type-input">Type</label>
-				<textarea
+        <textarea
           required
           type="text"
           name="type"
@@ -23,7 +25,7 @@ const ItemForm = (props) => {
           onChange={props.handleChange}
         />
         <label htmlFor="desc-input">Description</label>
-				<textarea
+        <textarea
           required
           type="text"
           name="desc"
@@ -33,7 +35,7 @@ const ItemForm = (props) => {
           onChange={props.handleChange}
         />
         <label htmlFor="url-input">Where to buy</label>
-				<input
+        <input
           required
           type="url"
           name="url"
@@ -43,7 +45,7 @@ const ItemForm = (props) => {
           onChange={props.handleChange}
         />
         <label htmlFor="img-input">Image</label>
-				<input
+        <input
           required
           type="url"
           name="img"
@@ -54,7 +56,7 @@ const ItemForm = (props) => {
         />
         <button type="submit">ADD</button>
       </form>
-    </>
+    </div>
   );
 }
 
