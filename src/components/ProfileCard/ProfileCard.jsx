@@ -6,8 +6,8 @@ const ProfileCard = ({ profiles, user }) => {
     {
       profiles.map(profile => (
         profile._id !== user.profile
-          ? <Link to={`/profiles/${profile._id}`}>
-            <p key={profile._id}>{profile.name}</p>
+          ? <Link to={`/profiles/${profile._id}`} key={profile._id}>
+            <p>{profile.name}</p>
           </Link>
           : null
       ))
