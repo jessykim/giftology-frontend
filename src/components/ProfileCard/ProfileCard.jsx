@@ -8,6 +8,7 @@ const ProfileCard = ({ profiles, user }) => {
         profile._id !== user.profile
           ? <Link to={`/profiles/${profile._id}`} key={profile._id}>
             <p>{profile.name}</p>
+            <button>add friend</button>
           </Link>
           : null
       ))
