@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Friends from "../Friends/Friends"
 
 const ProfileCard = (props) => {
 
@@ -8,18 +9,12 @@ const ProfileCard = (props) => {
 
   return (
     <>
-    {
-      props.profiles.map(profile => (
-        profile._id !== props.user.profile
-          ? <div key={profile._id}> 
-          <Link to={`/profiles/${profile._id}`} >
-            <p>{profile.name}</p>
+          <div key={props.profile._id}> 
+          <Link to={`/profiles/${props.profile._id}`} >
+            <p>{props.profile.name}</p>
           </Link>
-            <button onClick={() => handleAddFriendClick(profile._id)}>add friend</button>
+            <Friends handleAddFriendClick={handleAddFriendClick} profile={props.profile} user={props.user} userProfile={props.userProfile}/>
           </div>
-          : null
-      ))
-    }
   </>
   )
 }

@@ -2,6 +2,13 @@ import * as tokenService from '../services/tokenService'
 
 const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/api/profiles`
 
+async function getProfile(userProfileId) {
+  const res = await fetch(`${BASE_URL}/${userProfileId}`, {
+    headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
+  })
+  return await res.json()
+}
+
 async function getAllProfiles() {
   const res = await fetch(BASE_URL, {
     headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
@@ -27,9 +34,18 @@ async function addFriend(id, userId) {
       'Authorization': `Bearer ${tokenService.getToken()}`,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({_id: id})
+    body: JSON.stringify({ _id: id })
   })
   return await res.json()
 }
 
-export { getAllProfiles, addPhoto, addFriend }
+async function friendsIndex(userId) {
+  const res = await fetch(`${BASE_URL}/${userId}/friends`, {
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+    }
+  })
+  return await res.json()
+}
+
+export { getProfile, getAllProfiles, addPhoto, addFriend, friendsIndex }
