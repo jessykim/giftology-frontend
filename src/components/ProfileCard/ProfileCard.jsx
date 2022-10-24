@@ -1,15 +1,22 @@
 import { Link } from "react-router-dom"
 
-const ProfileCard = ({ profiles, user }) => {
+const ProfileCard = (props) => {
+
+  const handleAddFriendClick = (id) => {
+    props.handleAddFriend(id, props.user.profile)
+}
+
   return (
     <>
     {
-      profiles.map(profile => (
-        profile._id !== user.profile
-          ? <Link to={`/profiles/${profile._id}`} key={profile._id}>
+      props.profiles.map(profile => (
+        profile._id !== props.user.profile
+          ? <div key={profile._id}> 
+          <Link to={`/profiles/${profile._id}`} >
             <p>{profile.name}</p>
-            <button>add friend</button>
           </Link>
+            <button onClick={() => handleAddFriendClick(profile._id)}>add friend</button>
+          </div>
           : null
       ))
     }

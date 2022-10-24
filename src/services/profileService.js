@@ -20,4 +20,16 @@ async function addPhoto(photoData, profileId) {
   return await res.json()
 }
 
-export { getAllProfiles, addPhoto }
+async function addFriend(id, userId) {
+  const res = await fetch(`${BASE_URL}/${userId}/friends`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({_id: id})
+  })
+  return await res.json()
+}
+
+export { getAllProfiles, addPhoto, addFriend }

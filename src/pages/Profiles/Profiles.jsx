@@ -13,12 +13,16 @@ const Profiles = ({user}) => {
     fetchProfiles()
   }, [])
 
+  const handleAddFriend = async (id, userId) => {
+    await profileService.addFriend(id, userId)
+  }
+
   return (
     <>
       <h1>Hello. This is a list of all the profiles.</h1>
       {profiles.length ? 
         <>
-          <ProfileCard profiles={profiles} user={user}/>
+          <ProfileCard profiles={profiles} user={user} handleAddFriend={handleAddFriend}/>
         </>
       :
         <p>No profiles yet</p>
@@ -26,5 +30,5 @@ const Profiles = ({user}) => {
     </>
   )
 }
- 
+
 export default Profiles
