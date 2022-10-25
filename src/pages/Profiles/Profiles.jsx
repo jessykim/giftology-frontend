@@ -20,14 +20,13 @@ const Profiles = (props) => {
 
   const profileCards = profiles.map(profile => (
     profile._id !== props.user.profile
-      ? <ProfileCard profile={profile} user={props.user} userProfile={userProfile}handleAddFriend={props.handleAddFriend} handleAcceptFriend={props.handleAcceptFriend} key={profile._id} />
+      ? <ProfileCard profile={profile} user={props.user} userProfile={userProfile}handleAddFriend={props.handleAddFriend} handleAcceptFriend={props.handleAcceptFriend} handleDeleteFriend={props.handleDeleteFriend} key={profile._id} />
       : null
   ))
 
   return (
     <>
       <h1>Hello. This is a list of all the profiles.</h1>
-      {/* {profiles.length ? */}
         <>
           {profileCards}
         </>

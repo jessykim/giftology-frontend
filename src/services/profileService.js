@@ -60,4 +60,26 @@ async function acceptFriendRequest(id, userId) {
   return await res.json()
 }
 
-export { getProfile, getAllProfiles, addPhoto, addFriend, friendsIndex, acceptFriendRequest }
+async function deleteFriend(id, userId) {
+  const res = await fetch(`${BASE_URL}/${userId}/friends`, {
+    method: 'PUT',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ _id: id })
+  })
+  return await res.json()
+}
+
+async function show(id) {
+  const res = await fetch(`${BASE_URL}/${id}`, {
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+    }
+  })
+  return await res.json()
+}
+
+
+export { getProfile, getAllProfiles, addPhoto, addFriend, friendsIndex, acceptFriendRequest, deleteFriend, show }
