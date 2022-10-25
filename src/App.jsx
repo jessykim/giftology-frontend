@@ -1,6 +1,6 @@
 // npm modules
 import { useState } from 'react'
-import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // page components
 import Signup from './pages/Signup/Signup'
@@ -21,13 +21,15 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
 import * as authService from './services/authService'
+import * as wishlistService from './services/wishlistService'
 
 // styles
 import './App.css'
 
 const App = () => {
-  const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
+  const [user, setUser] = useState(authService.getUser())
+  const [wishlists, setWishlists] = useState([])
 
   const handleLogout = () => {
     authService.logout()
@@ -37,6 +39,12 @@ const App = () => {
 
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
+  }
+
+  const handleAddWishlist = async (wishlistData) => {
+    const newWishlist = await wishlistService.create(wishlistData)
+    setWishlists([newWishlist, ...wishlists])
+    navigate('/wishlists')
   }
 
 
@@ -81,7 +89,7 @@ const App = () => {
           path="/wishlists/new"
           element={
             <ProtectedRoute user={user}>
-              <NewWishlist />
+              <NewWishlist handleAddWishlist={handleAddWishlist} />
             </ProtectedRoute>
           }
         />

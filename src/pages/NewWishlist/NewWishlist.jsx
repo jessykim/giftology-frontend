@@ -15,7 +15,7 @@ const NewWishlist = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-		// props.handleAddWishlist(form)
+		props.handleAddWishlist(wishlistForm)
   }
 
   return (
