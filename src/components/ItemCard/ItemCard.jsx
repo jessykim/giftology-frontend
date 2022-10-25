@@ -23,13 +23,15 @@ const ItemCard = ({ item }) => {
         <p>
           {item.desc}
         </p>
-        <label htmlFor="purchased-input">Purchased</label>
-        <input type="checkbox" id="purchased-input" />
+        <div className="purchased">
+          <label htmlFor="purchased-input">Purchased</label>
+          <input type="checkbox" id="purchased-input" />
+        </div>
+        <button>Delete</button>
       </article>
       {/* <Link to="/wishlist/1/edit-item">
         <button onClick={() => handleChange()}>Edit</button>
       </Link> */}
-      <button>Delete</button>
     </>
   )
 }
