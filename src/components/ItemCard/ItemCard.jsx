@@ -23,11 +23,11 @@ const ItemCard = ({ item }) => {
           {item.desc}
         </p>
         <div className={styles.purchased}>
-          <label htmlFor="purchased-input">Purchased</label>
           <input type="checkbox" id="purchased-input" />
+          <label htmlFor="purchased-input">Purchased</label>
         </div>
         <a href={item.url}>
-          <div className={styles.buy}>Buy🛒</div>
+          <button className={styles.buy}>Buy🛒</button>
         </a>
         <button>Delete</button>
       </article>

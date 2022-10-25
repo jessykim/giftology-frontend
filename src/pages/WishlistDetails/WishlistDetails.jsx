@@ -34,20 +34,22 @@ const WishlistDetails = (props) => {
 
   return (
     <main className={styles.container}>
-      <article>
-        <header>
+      {/* <article> */}
+        <div className={styles.header}>
           <h1>{wishlist.name}</h1>
-          <p>{wishlist.description}</p>
+          <div className={styles.discription}>
+            <p>{wishlist.description}</p>
+          </div>
           <Link to="/wishlists/1/new">
             <button>Add Item</button>
           </Link>
-        </header>
+        </div>
         <div className={styles.cardsContainer}>
           {wishlist.items.map((item, idx) => (
             <ItemCard key={idx} item={item} />
           ))}
         </div>
-      </article>
+      {/* </article> */}
     </main>
   )
 }
