@@ -10,7 +10,7 @@
   border-radius: 5%;
 }
 
-label{
+.itemForm label{
   /* width:80%; */
   width: 100%;
   padding: 14px 0;
@@ -18,9 +18,9 @@ label{
 
 }
 
-
-
-input, textarea, select { 
+.itemForm input, 
+.itemForm textarea, 
+.itemForm select { 
   width: 100%;
   padding: 14px 0;
   font-size: 14px;
@@ -33,16 +33,16 @@ input, textarea, select {
 
 }
 
-textarea {
+.itemForm textarea {
   min-height: 50px;
 }
 
-label {
+.itemForm label {
   font-weight: 600;
   /* margin: 7px 0px 14px 0px; */
 }
 
-a {
+.itemForm a {
   border: none;
   font-size: 14px;
   background: none;
@@ -52,11 +52,12 @@ a {
   color: rgb(200, 200, 200);
 }
 
-input:focus, select:focus, textarea:focus {
+.itemForm input:focus, 
+.itemForm select:focus, 
+.itemForm textarea:focus {
   outline: none;
   border: 1px solid var(--primary);
 }
-
 
 .itemForm button{
   width:80px;
