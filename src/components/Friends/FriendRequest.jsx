@@ -36,7 +36,7 @@ const Friends = (props) => {
           <button className={styles.btn}><Link to={`/profiles/${props.profile._id}`}>View Profile</Link></button>
           </div>
           <div>
-          <button className={styles.btn} onClick={(() => props.handleDeleteClick(props.profile._id))}>Delete Friend</button>
+          <button className={styles.btn} onClick={(() => props.handleDeleteClick(props.profile._id))}>Remove Friend</button>
           </div>
           </div>
           : <button className={styles.btn} onClick={(() => props.handleAddFriendClick(props.profile._id))}>Add Friend</button>
