@@ -11,13 +11,22 @@ const handleAcceptClick = (id) => {
   props.handleAcceptFriend(id, props.user.profile)
 }
 
+const handleDeleteClick = (id) => {
+  console.log('deleted!')
+  props.handleDeleteFriend(id, props.user.profile)
+}
+
+const handleViewProfileClick= (id) => {
+  props.handleViewProfile(id, props.user.profile)
+}
+
   return (
     <>
           <div key={props.profile._id}> 
           <Link to={`/profiles/${props.profile._id}`} >
             <p>{props.profile.name}</p>
           </Link>
-            <FriendRequest handleAddFriendClick={handleAddFriendClick} handleAcceptClick={handleAcceptClick} profile={props.profile} user={props.user} userProfile={props.userProfile}/>
+            <FriendRequest handleAddFriendClick={handleAddFriendClick} handleAcceptClick={handleAcceptClick} handleDeleteClick={handleDeleteClick} profile={props.profile} user={props.user} userProfile={props.userProfile}/>
           </div>
   </>
   )

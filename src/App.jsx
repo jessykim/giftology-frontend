@@ -67,6 +67,11 @@ const App = () => {
     window.location.reload(false)
   }
 
+  const handleDeleteFriend = async (id, userId) => {
+    await profileService.deleteFriend(id, userId)
+    window.location.reload(false)
+  }
+
 
   return (
     <>
@@ -85,7 +90,7 @@ const App = () => {
           path="/profiles"
           element={
             <ProtectedRoute user={user}>
-              <Profiles user={user} handleAddFriend={handleAddFriend} handleAcceptFriend={handleAcceptFriend}/>
+              <Profiles user={user} handleAddFriend={handleAddFriend} handleAcceptFriend={handleAcceptFriend} handleDeleteFriend={handleDeleteFriend}/>
             </ProtectedRoute>
           }
         />
