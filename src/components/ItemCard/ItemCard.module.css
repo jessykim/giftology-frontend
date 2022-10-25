@@ -1,0 +1,23 @@
+.container{
+  border: 2px black solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+article > *{
+  width: 100%;
+}
+
+.container img{
+  width:150px;
+}
+
+.container > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
