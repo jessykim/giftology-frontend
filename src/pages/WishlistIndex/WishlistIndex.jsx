@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './WishlistIndex.module.css'
 import WishlistCard from "../../components/WishlistCard/WishlistCard"
-import { wishlists } from "../../components/data"
+// import { wishlists } from "../../components/data"
 
 const WishlistIndex = (props) => {
   const wishlists = props.wishlists
