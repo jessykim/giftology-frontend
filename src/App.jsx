@@ -113,7 +113,7 @@ const App = () => {
           path="/wishlists/:id"
           element={
             <ProtectedRoute user={user}>
-              <WishlistDetails />
+              <WishlistDetails wishlists={wishlists} />
             </ProtectedRoute>
           }
         />
@@ -126,7 +126,7 @@ const App = () => {
           }
         />
         <Route
-          path="/wishlists/1/new"
+          path="/wishlists/:id/new"
           element={
             <ProtectedRoute user={user}>
               <NewItem />
