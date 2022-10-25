@@ -5,7 +5,7 @@ import { wishlists } from "../../components/data"
 
 const WishlistIndex = (props) => {
   const wishlists = props.wishlists
-  console.log(wishlists)
+  // console.log(wishlists)
   return (
     <main className={styles.container}>
       <h1>Wishlist Index</h1>
