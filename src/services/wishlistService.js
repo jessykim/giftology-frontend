@@ -73,7 +73,7 @@ const deleteWishlist = async (id) => {
 
 const itemIndex = async (id) => {
   try {
-    const res = await fetch(`${BASE_URL}/${id}`, {
+    const res = await fetch(`${BASE_URL}/${id}/items`, {
       headers: { "Authorization": `Bearer ${tokenService.getToken()}`}
     })
     return res.json()
