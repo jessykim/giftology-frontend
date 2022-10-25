@@ -8,7 +8,7 @@ const WishlistIndex = (props) => {
     <main className={styles.container}>
       <h1>Wishlist Index</h1>
       <Link to="/wishlists/new">
-        <button>Create Wishlist</button>
+        <button id="create">Create Wishlist</button>
       </Link>
 
       {wishlists.map((wishlist, idx) => (

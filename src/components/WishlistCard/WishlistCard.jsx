@@ -16,12 +16,12 @@ const WishlistCard = ({ wishlist }) => {
           <p>
             {wishlist.description}
           </p>
+          <Link to="/wishlist/1/edit">
+            <button>Edit</button>
+          </Link>
+          <button>Delete</button>
         </article>
       </Link>
-      <Link to="/wishlist/1/edit">
-        <button>Edit</button>
-      </Link>
-      <button>Delete</button>
     </>
   )
 }

@@ -1,6 +1,11 @@
 .navbar a{
   text-decoration: none;
   color: white;
+  font-size: 80%;
+}
+
+.navbar ul{
+  padding: 1%;
 }
 
 ul{
