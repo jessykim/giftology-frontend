@@ -16,21 +16,18 @@ const WishlistDetails = (props) => {
   const { id } = useParams()
 
   const [wishlist, setWishlist] = useState({})
-
   const [items, setItems] = useState([])
-
 
   useEffect(() => {
     const fetchWishlist = async () => {
-      // const data = await wishlistService.show(id)
-      // setWishlist(data)
+      const data = await wishlistService.show(id)
+      setWishlist(data)
       const itemData = await wishlistService.itemIndex(id)
       setItems(itemData)
     }
     fetchWishlist()
   }, [id])
 
-  console.log("WISH", items)
 
   // if (!wishlist) return <Loading />
 
@@ -47,11 +44,11 @@ const WishlistDetails = (props) => {
             <button>Add Item</button>
           </Link>
         </div>
-        {/* <div className={styles.cardsContainer}>
-          {wishlist.items.map((item, idx) => (
+        <div className={styles.cardsContainer}>
+          {items.map((item, idx) => (
             <ItemCard key={idx} item={item} />
           ))}
-        </div> */}
+        </div>
       </article>
     </main>
   )
