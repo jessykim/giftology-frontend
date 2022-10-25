@@ -48,6 +48,12 @@ const App = () => {
     navigate('/wishlists')
   }
 
+  const handleUpdateWishlist = async (wishlistData) => {
+    const updatedWishlist = await wishlistService.update(wishlistData)
+    setWishlists(wishlists.map((w) => wishlistData._id === w._id ? updatedWishlist : w))
+    navigate('/wishlists')
+  }
+
   useEffect(() => {
     const fetchWishlist = async () => {
       const data = await wishlistService.index(user.profile)
@@ -122,10 +128,10 @@ const App = () => {
           }
         />
         <Route
-          path="/wishlists/1/edit"
+          path="/wishlists/:id/edit"
           element={
             <ProtectedRoute user={user}>
-              <EditWishlist />
+              <EditWishlist handleUpdateWishlist={handleUpdateWishlist} />
             </ProtectedRoute>
           }
         />
