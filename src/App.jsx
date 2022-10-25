@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // page components
@@ -47,6 +47,15 @@ const App = () => {
     navigate('/wishlists')
   }
 
+  useEffect(() => {
+    const fetchWishlist = async () => {
+      const data = await wishlistService.index(user.profile)
+      setWishlists(data)
+    }
+    if (user) fetchWishlist()
+  }, [user])
+
+  console.log("ALLLL", wishlists)
 
   return (
     <>
@@ -73,12 +82,12 @@ const App = () => {
           path="/wishlists"
           element={
             <ProtectedRoute user={user}>
-              <WishlistIndex />
+              <WishlistIndex  wishlists={wishlists} />
             </ProtectedRoute>
           }
         />
         <Route
-          path="/wishlists/1"
+          path="/wishlists/:id"
           element={
             <ProtectedRoute user={user}>
               <WishlistDetails />

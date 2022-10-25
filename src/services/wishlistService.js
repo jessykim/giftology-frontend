@@ -2,9 +2,9 @@ import * as tokenService from "./tokenService"
 
 const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/api/wishlists`
 
-const index = async () => {
+const index = async (profileId) => {
   try {
-    const res = await fetch(BASE_URL, {
+    const res = await fetch(`${BASE_URL}?author=${profileId}`, {
       headers: { 'Authorization': `Bearer ${tokenService.getToken()}`}
     })
     return res.json()
