@@ -20,10 +20,10 @@ const WishlistCard = ({ wishlist, handleDeleteWishlist }) => {
         </article>
       </Link>
       <div>
-        <Link to={`/wishlists/${wishlist._id}/edit`}>
+        <Link to={`/wishlists/${wishlist._id}/edit`} state={wishlist}>
           <button>Edit</button>
         </Link>
-        <button>Delete</button>
+        <button onClick={() => handleDeleteWishlist(wishlist._id)}>Delete</button>
       </div>
     </div>
   )
