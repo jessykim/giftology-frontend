@@ -48,4 +48,16 @@ async function friendsIndex(userId) {
   return await res.json()
 }
 
-export { getProfile, getAllProfiles, addPhoto, addFriend, friendsIndex }
+async function acceptFriendRequest(id, userId) {
+  const res = await fetch(`${BASE_URL}/${userId}/friends`, {
+    method: 'PATCH',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ _id: id })
+  })
+  return await res.json()
+}
+
+export { getProfile, getAllProfiles, addPhoto, addFriend, friendsIndex, acceptFriendRequest }

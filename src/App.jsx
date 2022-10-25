@@ -22,6 +22,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 // services
 import * as authService from './services/authService'
 import * as wishlistService from './services/wishlistService'
+import * as profileService from './services/profileService'
 
 // styles
 import './App.css'
@@ -56,6 +57,16 @@ const App = () => {
   }, [user])
 
   console.log("ALLLL", wishlists)
+  const handleAddFriend = async (id, userId) => {
+    await profileService.addFriend(id, userId)
+    window.location.reload(false)
+  }
+
+  const handleAcceptFriend = async (id, userId) => {
+    await profileService.acceptFriendRequest(id, userId)
+    window.location.reload(false)
+  }
+
 
   return (
     <>
@@ -74,7 +85,7 @@ const App = () => {
           path="/profiles"
           element={
             <ProtectedRoute user={user}>
-              <Profiles user={user}/>
+              <Profiles user={user} handleAddFriend={handleAddFriend} handleAcceptFriend={handleAcceptFriend}/>
             </ProtectedRoute>
           }
         />

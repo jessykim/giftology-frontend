@@ -1,12 +1,9 @@
 import { useState, useEffect } from 'react'
 import ProfileCard from '../../components/ProfileCard/ProfileCard'
 import * as profileService from '../../services/profileService'
-import { useNavigate } from 'react-router-dom'
 
-const Profiles = ({ user }) => {
-  const navigate = useNavigate()
+const Profiles = (props) => {
   const [profiles, setProfiles] = useState([])
-  const [friends, setFriends] = useState([])
 
   useEffect(() => {
     const fetchProfiles = async () => {
@@ -17,20 +14,13 @@ const Profiles = ({ user }) => {
     fetchProfiles()
   }, [])
 
-  const handleAddFriend = async (id, userId) => {
-    const newFriend = await profileService.addFriend(id, userId)
-    setFriends([newFriend, ...friends])
-    navigate('/profiles')
-  }
 
+  let userProfile = profiles.find(profile => profile._id === props.user.profile)
 
-  let userProfile = profiles.find(profile => profile._id === user.profile)
-
-  console.log('userProfile', userProfile)
 
   const profileCards = profiles.map(profile => (
-    profile._id !== user.profile
-      ? <ProfileCard profile={profile} user={user} userProfile={userProfile}handleAddFriend={handleAddFriend} key={profile._id} />
+    profile._id !== props.user.profile
+      ? <ProfileCard profile={profile} user={props.user} userProfile={userProfile}handleAddFriend={props.handleAddFriend} handleAcceptFriend={props.handleAcceptFriend} key={profile._id} />
       : null
   ))
 
