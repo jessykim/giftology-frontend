@@ -14,6 +14,7 @@ import WishlistDetails from './pages/WishlistDetails/WishlistDetails'
 import EditWishlist from './pages/EditWishlist/EditWishlist'
 import NewItem from './pages/NewItem/NewItem'
 import EditItem from './pages/EditItem/EditItem'
+import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -78,6 +79,10 @@ const App = () => {
     window.location.reload(false)
   }
 
+  const handleViewProfile = async (id) => {
+    await profileService.show(id)
+  }
+
 
   return (
     <>
@@ -96,10 +101,19 @@ const App = () => {
           path="/profiles"
           element={
             <ProtectedRoute user={user}>
-              <Profiles user={user} handleAddFriend={handleAddFriend} handleAcceptFriend={handleAcceptFriend} handleDeleteFriend={handleDeleteFriend}/>
+              <Profiles user={user} handleAddFriend={handleAddFriend} handleAcceptFriend={handleAcceptFriend} handleDeleteFriend={handleDeleteFriend} handleViewProfile={handleViewProfile}/>
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/profiles/:id"
+          element={
+            <ProtectedRoute user={user}>
+              <ProfileDetails user={user}/>
+            </ProtectedRoute>
+          }
+        />
+
         <Route
           path="/wishlists"
           element={

@@ -26,7 +26,7 @@ const handleViewProfileClick= (id) => {
           <Link to={`/profiles/${props.profile._id}`} >
             <p>{props.profile.name}</p>
           </Link>
-            <FriendRequest handleAddFriendClick={handleAddFriendClick} handleAcceptClick={handleAcceptClick} handleDeleteClick={handleDeleteClick} profile={props.profile} user={props.user} userProfile={props.userProfile}/>
+            <FriendRequest handleAddFriendClick={handleAddFriendClick} handleAcceptClick={handleAcceptClick} handleDeleteClick={handleDeleteClick} handleViewProfileClick={handleViewProfileClick} profile={props.profile} user={props.user} userProfile={props.userProfile}/>
           </div>
   </>
   )
