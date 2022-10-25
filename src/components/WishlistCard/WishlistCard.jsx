@@ -8,9 +8,9 @@ import styles from './WishlistCard.module.css'
 const WishlistCard = ({ wishlist, handleDeleteWishlist }) => {
   // console.log(wishlist)
   return (
-    <>
+    <div className={styles.container}>
       <Link to={`/wishlists/${wishlist._id}/`}>
-        <article className={styles.container}>
+        <article>
           <h2>
             {wishlist.name}
           </h2>
@@ -19,11 +19,13 @@ const WishlistCard = ({ wishlist, handleDeleteWishlist }) => {
           </p>
         </article>
       </Link>
-      <Link to={`/wishlists/${wishlist._id}/edit`} state={wishlist} >
-        <button>Edit</button>
-      </Link>
-      <button onClick={() => handleDeleteWishlist(wishlist._id)}>Delete</button>
-    </>
+      <div>
+        <Link to={`/wishlists/${wishlist._id}/edit`}>
+          <button>Edit</button>
+        </Link>
+        <button>Delete</button>
+      </div>
+    </div>
   )
 }
 

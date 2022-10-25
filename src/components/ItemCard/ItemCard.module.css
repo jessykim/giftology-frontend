@@ -1,15 +1,23 @@
 .container{
-  /* border: 2px black solid; */
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   padding: 2% 3%;
-  width: 21%;
-  max-width: 150px;
-  margin: 1%;
+  width: 100%;
+  margin: 5%;
   background-color: #F5E8C7;
   border-radius: 20px;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info>*{
+  text-align: center;
 }
 
 .container *{
@@ -19,15 +27,8 @@
 }
 
 .container img{
-  width:100%;
+  width:50%;
   border-radius: 10px;
-}
-
-.container > div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
 }
 
 .container button{
@@ -39,12 +40,13 @@
   font-size: 15px;
 }
 
-.container > a{
-  text-decoration: none;
+.purchased{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.container input{
-  width: 17px;
-  margin: 0;
+.purchased *{
+  margin:0;
+  width: auto;
 }
-

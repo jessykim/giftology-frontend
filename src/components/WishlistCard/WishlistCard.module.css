@@ -1,17 +1,25 @@
 .container{
-  border: 2px black solid;
-  width:200px;
-  height: 200px;
+  /* border: 2px black solid; */
+  width:80%;
+  height: 30%;
   background-color: #F8ECD1;
-  color: #774181;
+  /* color: #774181; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 2% 3%;
-  margin: 1%;
+  margin: 2%;
   border-radius: 20px;
 }
+
+.container a{
+  text-decoration: none;
+  color:purple;
+  margin: 0;
+}
+
+
 
 
 
