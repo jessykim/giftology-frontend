@@ -1,9 +1,9 @@
-
+import styles from "./WishlistForm.module.css"
 
 const WishlistForm = (props) => {  
   return ( 
     <>
-      <form onSubmit={props.handleSubmit}>
+      <form onSubmit={props.handleSubmit} className={styles.itemForm}>
         <label htmlFor="name-input">Name</label>
         <input
           required

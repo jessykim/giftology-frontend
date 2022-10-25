@@ -28,7 +28,7 @@ const WishlistDetails = (props) => {
 
   let wishlist = wishlists[0]
 
-  console.log("Styles:", styles);
+  // console.log("Styles:", styles);
 
   // if (!wishlist) return <Loading />
 
