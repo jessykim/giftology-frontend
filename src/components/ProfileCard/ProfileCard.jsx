@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom"
-import Friends from "../Friends/Friends"
+import FriendRequest from "../Friends/FriendRequest"
 
 const ProfileCard = (props) => {
 
   const handleAddFriendClick = (id) => {
     props.handleAddFriend(id, props.user.profile)
+}
+
+const handleAcceptClick = (id) => {
+  props.handleAcceptFriend(id, props.user.profile)
 }
 
   return (
@@ -13,7 +17,7 @@ const ProfileCard = (props) => {
           <Link to={`/profiles/${props.profile._id}`} >
             <p>{props.profile.name}</p>
           </Link>
-            <Friends handleAddFriendClick={handleAddFriendClick} profile={props.profile} user={props.user} userProfile={props.userProfile}/>
+            <FriendRequest handleAddFriendClick={handleAddFriendClick} handleAcceptClick={handleAcceptClick} profile={props.profile} user={props.user} userProfile={props.userProfile}/>
           </div>
   </>
   )
