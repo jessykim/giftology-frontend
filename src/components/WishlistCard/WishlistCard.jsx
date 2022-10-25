@@ -5,7 +5,7 @@ import styles from './WishlistCard.module.css'
 // import Icon from "../Icon/Icon"
 // import AuthorInfo from "../AuthorInfo/AuthorInfo"
 
-const WishlistCard = ({ wishlist }) => {
+const WishlistCard = ({ wishlist, handleDeleteWishlist }) => {
   // console.log(wishlist)
   return (
     <>
@@ -22,7 +22,7 @@ const WishlistCard = ({ wishlist }) => {
       <Link to={`/wishlists/${wishlist._id}/edit`} state={wishlist} >
         <button>Edit</button>
       </Link>
-      <button>Delete</button>
+      <button onClick={() => handleDeleteWishlist(wishlist._id)}>Delete</button>
     </>
   )
 }

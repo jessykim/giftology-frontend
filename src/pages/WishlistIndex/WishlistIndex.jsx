@@ -14,7 +14,7 @@ const WishlistIndex = (props) => {
       </Link>
 
       {wishlists.map((wishlist, idx) => (
-        <WishlistCard wishlist={wishlist} key={idx} />
+        <WishlistCard wishlist={wishlist} key={idx} handleDeleteWishlist={props.handleDeleteWishlist} />
       ))}
     </main>
   )
