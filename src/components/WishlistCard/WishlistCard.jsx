@@ -6,7 +6,7 @@ import styles from './WishlistCard.module.css'
 // import AuthorInfo from "../AuthorInfo/AuthorInfo"
 
 const WishlistCard = ({ wishlist }) => {
-  console.log(wishlist)
+  // console.log(wishlist)
   return (
     <>
       <Link to={`/wishlists/${wishlist._id}/`}>
@@ -19,7 +19,7 @@ const WishlistCard = ({ wishlist }) => {
           </p>
         </article>
       </Link>
-      <Link to={`/wishlists/${wishlist._id}/edit`}>
+      <Link to={`/wishlists/${wishlist._id}/edit`} state={wishlist} >
         <button>Edit</button>
       </Link>
       <button>Delete</button>

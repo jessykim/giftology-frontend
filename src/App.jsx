@@ -62,7 +62,7 @@ const App = () => {
     if (user) fetchWishlist()
   }, [user])
 
-  console.log("ALLLL", wishlists)
+  // console.log("ALLLL", wishlists)
   const handleAddFriend = async (id, userId) => {
     await profileService.addFriend(id, userId)
     window.location.reload(false)
