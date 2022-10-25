@@ -69,7 +69,6 @@ const App = () => {
     if (user) fetchWishlist()
   }, [user])
 
-  // console.log("ALLLL", wishlists)
   const handleAddFriend = async (id, userId) => {
     await profileService.addFriend(id, userId)
     window.location.reload(false)
@@ -145,7 +144,7 @@ const App = () => {
           }
         />
         <Route
-          path="/wishlists/:id/new"
+          path="/wishlists/:id/new-item"
           element={
             <ProtectedRoute user={user}>
               <NewItem />
