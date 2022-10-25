@@ -4,6 +4,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  background-color: #F5E8C7;
+  width:70vw;
+  padding: 20px;
+  border-radius: 5%;
 }
 
 .label,
@@ -13,4 +17,54 @@
 
 .inputContainer {
   margin-bottom: 1rem;
+}
+
+label{
+  /* width:80%; */
+  width: 100%;
+  padding: 14px 0;
+}
+
+input, textarea, select { 
+  width: 100%;
+  padding: 14px 0;
+  font-size: 14px;
+  resize: vertical;
+  border-radius: 5px;
+  margin: 7px 0px 14px 0px;
+  border: 1px solid var(--border);
+  font-family: canada-type-gibson, sans-serif;
+}
+
+textarea {
+  min-height: 50px;
+}
+
+label {
+  font-weight: 600;
+  /* margin: 7px 0px 14px 0px; */
+}
+
+a {
+  border: none;
+  font-size: 14px;
+  background: none;
+  font-weight: 500;
+  margin-top: 14px;
+  text-align: center;
+  color: rgb(200, 200, 200);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border: 1px solid var(--primary);
+}
+
+.container button{
+  width:80px;
+  border: none;
+  margin: 15px;
+  background-color: #DEB6AB;
+  border-radius: 5px;
+  padding: 5px;
 }
