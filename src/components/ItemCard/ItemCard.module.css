@@ -4,15 +4,22 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 1% 3%;
+  width: 25%;
+  margin: 10px 1%;
+  background-color: #F5E8C7;
+  border-radius: 20px;
 }
 
-article > *{
+.container *{
   width: 100%;
+  margin: 5px;
+  padding: 0;
 }
 
 .container img{
-  width:150px;
+  width:100%;
+  border-radius: 10px;
 }
 
 .container > div{
@@ -21,3 +28,9 @@ article > *{
   align-items: center;
   flex-direction: row;
 }
+
+.buy{
+  color: black;
+  font-size: 15px;
+}
+

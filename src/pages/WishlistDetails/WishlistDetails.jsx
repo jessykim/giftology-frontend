@@ -42,7 +42,7 @@ const WishlistDetails = (props) => {
             <button>Add Item</button>
           </Link>
         </header>
-        <div>
+        <div className={styles.cardsContainer}>
           {wishlist.items.map((item, idx) => (
             <ItemCard key={idx} item={item} />
           ))}
