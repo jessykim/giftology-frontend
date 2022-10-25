@@ -1,0 +1,11 @@
+@media (min-width: 600px) {
+.containerA {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 60rem;
+  width: 20rem;
+  padding: 5px;
+  gap: 20px;
+}
+}

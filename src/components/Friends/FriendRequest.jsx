@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import styles from './FriendRequest.module.css'
 
 const Friends = (props) => {
 
@@ -24,21 +25,21 @@ const Friends = (props) => {
 
 
   return (
-    <div>
+    <div className={styles.container}>
       {props.userProfile.friends.some(isFriendRequester)
-        ? <p>request sent!</p>
+        ? <p>Request sent!</p>
         : props.userProfile.friends.some(isFriendRecipient)
           ? <button onClick={(() => props.handleAcceptClick(props.profile._id))}>accept</button>
           : props.userProfile.friends.some(isFriend)
           ? <div>
             <div>
-          <button><Link to={`/profiles/${props.profile._id}`}>view profile</Link></button>
+          <button className={styles.btn}><Link to={`/profiles/${props.profile._id}`}>View Profile</Link></button>
           </div>
           <div>
-          <button onClick={(() => props.handleDeleteClick(props.profile._id))}>delete Friend</button>
+          <button className={styles.btn} onClick={(() => props.handleDeleteClick(props.profile._id))}>Delete Friend</button>
           </div>
           </div>
-          : <button onClick={(() => props.handleAddFriendClick(props.profile._id))}>add friend</button>
+          : <button className={styles.btn} onClick={(() => props.handleAddFriendClick(props.profile._id))}>Add Friend</button>
         }
     </div>
   )

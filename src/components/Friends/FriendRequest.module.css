@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  width: 100px;
+  height: 30px;
+  margin: 10px auto;
+  border: 1px solid #AC7088;
+  border-radius: 5px;
+  background-color: #AC7088;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #EBD9DD;
+  color: #AC7088;
+}
+
+.btn>a {
+  text-decoration: none;
+  color: black;
+  font-size: 13.5px;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #AC7088;
+}
