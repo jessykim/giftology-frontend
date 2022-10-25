@@ -20,7 +20,7 @@ const Profiles = (props) => {
 
   const profileCards = profiles.map(profile => (
     profile._id !== props.user.profile
-      ? <ProfileCard profile={profile} user={props.user} userProfile={userProfile}handleAddFriend={props.handleAddFriend} key={profile._id} />
+      ? <ProfileCard profile={profile} user={props.user} userProfile={userProfile}handleAddFriend={props.handleAddFriend} handleAcceptFriend={props.handleAcceptFriend} key={profile._id} />
       : null
   ))
 

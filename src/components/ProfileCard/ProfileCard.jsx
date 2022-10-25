@@ -7,13 +7,17 @@ const ProfileCard = (props) => {
     props.handleAddFriend(id, props.user.profile)
 }
 
+const handleAcceptClick = (id) => {
+  props.handleAcceptFriend(id, props.user.profile)
+}
+
   return (
     <>
           <div key={props.profile._id}> 
           <Link to={`/profiles/${props.profile._id}`} >
             <p>{props.profile.name}</p>
           </Link>
-            <FriendRequest handleAddFriendClick={handleAddFriendClick} profile={props.profile} user={props.user} userProfile={props.userProfile}/>
+            <FriendRequest handleAddFriendClick={handleAddFriendClick} handleAcceptClick={handleAcceptClick} profile={props.profile} user={props.user} userProfile={props.userProfile}/>
           </div>
   </>
   )

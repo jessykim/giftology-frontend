@@ -35,7 +35,12 @@ const App = () => {
   }
 
   const handleAddFriend = async (id, userId) => {
-    const newFriend = await profileService.addFriend(id, userId)
+    await profileService.addFriend(id, userId)
+    window.location.reload(false)
+  }
+
+  const handleAcceptFriend = async (id, userId) => {
+    await profileService.acceptFriendRequest(id, userId)
     window.location.reload(false)
   }
 
@@ -57,7 +62,7 @@ const App = () => {
           path="/profiles"
           element={
             <ProtectedRoute user={user}>
-              <Profiles user={user} handleAddFriend={handleAddFriend}/>
+              <Profiles user={user} handleAddFriend={handleAddFriend} handleAcceptFriend={handleAcceptFriend}/>
             </ProtectedRoute>
           }
         />
