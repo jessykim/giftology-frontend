@@ -1,55 +1,51 @@
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 
-import { wishlists } from "../../components/data"
+// import { wishlists } from "../../components/data"
 
 // components
-import Loading from "../Loading/Loading"
+// import Loading from "../Loading/Loading"
 // import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 import ItemCard from "../../components/ItemCard/ItemCard"
 import styles from "./WishlistDetails.module.css"
 
 // Services
-// import * as wishlistService from "../../services/wishlistService"
+import * as wishlistService from "../../services/wishlistService"
 
 const WishlistDetails = (props) => {
-  // const { id } = useParams()
-  // const [wishlist, setWishlist] = useState(null)
+  const { id } = useParams()
 
-  // useEffect(() => {
-  //   const fetchWishlist = async () => {
-  //     const data = await wishlistService.show(id)
-  //     setWishlist(data)
-  //   }
-  //   fetchWishlist()
-  // }, [id])
+  const [wishlist, setWishlist] = useState({})
 
-  // setWishlist(wishlists[0])
-
-  let wishlist = wishlists[0]
-
-  // console.log("Styles:", styles);
+  useEffect(() => {
+    const fetchWishlist = async () => {
+      const data = await wishlistService.show(id)
+      setWishlist(data)
+    }
+    fetchWishlist()
+  }, [id])
 
   // if (!wishlist) return <Loading />
 
   return (
     <main className={styles.container}>
-      {/* <article> */}
-        <div className={styles.header}>
+      <article>
+        <div>
+        {/* <div className={styles.header}> */}
           <h1>{wishlist.name}</h1>
           <div className={styles.discription}>
             <p>{wishlist.description}</p>
           </div>
-          <Link to="/wishlists/1/new">
+          <Link to={`/wishlists/${wishlist._id}/new`}>
             <button>Add Item</button>
           </Link>
         </div>
-        <div className={styles.cardsContainer}>
+        {/* <div className={styles.cardsContainer}>
           {wishlist.items.map((item, idx) => (
             <ItemCard key={idx} item={item} />
           ))}
-        </div>
-      {/* </article> */}
+        </div> */}
+      </article>
     </main>
   )
 }

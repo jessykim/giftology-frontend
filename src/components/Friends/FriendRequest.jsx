@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 const Friends = (props) => {
 
@@ -29,7 +30,14 @@ const Friends = (props) => {
         : props.userProfile.friends.some(isFriendRecipient)
           ? <button onClick={(() => props.handleAcceptClick(props.profile._id))}>accept</button>
           : props.userProfile.friends.some(isFriend)
-          ? <p>view profile</p>
+          ? <div>
+            <div>
+          <button><Link to={`/profiles/${props.profile._id}`}>view profile</Link></button>
+          </div>
+          <div>
+          <button onClick={(() => props.handleDeleteClick(props.profile._id))}>delete Friend</button>
+          </div>
+          </div>
           : <button onClick={(() => props.handleAddFriendClick(props.profile._id))}>add friend</button>
         }
     </div>

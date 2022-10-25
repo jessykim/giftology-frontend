@@ -5,8 +5,8 @@ import styles from './WishlistCard.module.css'
 // import Icon from "../Icon/Icon"
 // import AuthorInfo from "../AuthorInfo/AuthorInfo"
 
-const WishlistCard = ({ wishlist }) => {
-  console.log(wishlist)
+const WishlistCard = ({ wishlist, handleDeleteWishlist }) => {
+  // console.log(wishlist)
   return (
     <div className={styles.container}>
       <Link to={`/wishlists/${wishlist._id}/`}>
