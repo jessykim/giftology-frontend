@@ -42,8 +42,6 @@ label {
   /* margin: 7px 0px 14px 0px; */
 }
 
-
-
 a {
   border: none;
   font-size: 14px;
@@ -60,5 +58,12 @@ input:focus, select:focus, textarea:focus {
 }
 
 
-
+.itemForm button{
+  width:80px;
+  border: none;
+  margin: 15px;
+  background-color: #DEB6AB;
+  border-radius: 5px;
+  padding: 5px;
+}
 

@@ -53,7 +53,7 @@ const ItemForm = (props) => {
         placeholder="Image URL"
         onChange={props.handleChange}
       />
-      <button type="submit">ADD</button>
+      <button type="submit">Add</button>
     </form>
   );
 }

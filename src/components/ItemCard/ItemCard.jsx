@@ -18,15 +18,17 @@ const ItemCard = ({ item }) => {
         <h2>
           {item.name}
         </h2>
-        <h3>{item.type}</h3>
-        <h3>{item.url}</h3>
+        <h5>{item.type}</h5>
         <p>
           {item.desc}
         </p>
-        <div className="purchased">
-          <label htmlFor="purchased-input">Purchased</label>
+        <div className={styles.purchased}>
           <input type="checkbox" id="purchased-input" />
+          <label htmlFor="purchased-input">Purchased</label>
         </div>
+        <a href={item.url}>
+          <button className={styles.buy}>Buy🛒</button>
+        </a>
         <button>Delete</button>
       </article>
       {/* <Link to="/wishlist/1/edit-item">

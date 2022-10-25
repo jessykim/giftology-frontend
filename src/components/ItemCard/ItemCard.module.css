@@ -1,18 +1,26 @@
 .container{
-  border: 2px black solid;
+  /* border: 2px black solid; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 2% 3%;
+  width: 21%;
+  max-width: 150px;
+  margin: 1%;
+  background-color: #F5E8C7;
+  border-radius: 20px;
 }
 
-article > *{
+.container *{
   width: 100%;
+  margin: 5px 0;
+  padding: 0;
 }
 
 .container img{
-  width:150px;
+  width:100%;
+  border-radius: 10px;
 }
 
 .container > div{
@@ -21,3 +29,22 @@ article > *{
   align-items: center;
   flex-direction: row;
 }
+
+.container button{
+  background-color: #DEB6AB;
+  border-radius: 5px;
+  padding: 5px;
+  width:60px;
+  border: none;
+  font-size: 15px;
+}
+
+.container > a{
+  text-decoration: none;
+}
+
+.container input{
+  width: 17px;
+  margin: 0;
+}
+
