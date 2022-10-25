@@ -13,7 +13,7 @@ const EditWishlist = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-		// props.handleUpdateWishlist(wishlistForm)
+		props.handleUpdateWishlist(wishlistForm)
   }
 
   return (
