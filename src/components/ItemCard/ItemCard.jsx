@@ -14,12 +14,14 @@ const ItemCard = ({ item }) => {
   return (
     <>
       <article className={styles.container}>
-        <img src={item.img} alt="img" />
-        <div className={styles.info}>
+        {/* <div className={styles.title}> */}
+          <img src={item.img} alt="img" className={styles.img} />
           <h2>
             {item.name}
           </h2>
-          <h5>{item.type}</h5>
+        {/* </div> */}
+        {/* <div className={styles.info}> */}
+          <h5>{item.category}</h5>
           <p>
             {item.desc}
           </p>
@@ -31,7 +33,7 @@ const ItemCard = ({ item }) => {
             <button className={styles.buy}>Buy🛒</button>
           </a>
           <button>Delete</button>
-        </div>
+        {/* </div> */}
       </article>
       {/* <Link to="/wishlist/1/edit-item">
         <button onClick={() => handleChange()}>Edit</button>
