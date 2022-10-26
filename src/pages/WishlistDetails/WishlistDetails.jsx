@@ -33,7 +33,7 @@ const WishlistDetails = ({items, setItems, setWishlistId}) => {
   return (
     <main className={styles.page}>
       <article className={styles.container}>
-        <div>
+        {/* <div> */}
           {/* <div className={styles.header}> */}
           <div className={styles.wishlistName}>{wishlist.name}</div>
           <div className={styles.discription}>
@@ -42,7 +42,7 @@ const WishlistDetails = ({items, setItems, setWishlistId}) => {
           <Link to={`/wishlists/${wishlist._id}/new-item`} >
             <button>Add Item</button>
           </Link>
-        </div>
+        {/* </div> */}
         <div className={styles.cardsContainer}> 
           {items.map((item, idx) => (
             <ItemCard key={idx} item={item} />
