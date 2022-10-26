@@ -15,6 +15,7 @@ import EditWishlist from './pages/EditWishlist/EditWishlist'
 import NewItem from './pages/NewItem/NewItem'
 import EditItem from './pages/EditItem/EditItem'
 import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
+import Friends from './pages/Friends/Friends'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -32,6 +33,9 @@ const App = () => {
   const navigate = useNavigate()
   const [user, setUser] = useState(authService.getUser())
   const [wishlists, setWishlists] = useState([])
+
+  const [items, setItems] = useState([])
+  const [wishlistId, setWishlistId] = useState([])
 
   const handleLogout = () => {
     authService.logout()
@@ -60,6 +64,12 @@ const App = () => {
     setWishlists(wishlists.filter(w => w._id !== deletedWishlist._id))
     navigate('/wishlists')
   }
+
+  const handleAddItem = async (itemData) => {
+  const newItem = await wishlistService.createItem(itemData, wishlistId)
+  setItems([newItem, ...items])
+  navigate(`/wishlists/${wishlistId}`)
+}
 
   useEffect(() => {
     const fetchWishlist = async () => {
@@ -120,6 +130,15 @@ const App = () => {
         />
 
         <Route
+          path="/friends"
+          element={
+            <ProtectedRoute user={user}>
+              <Friends user={user} handleAddFriend={handleAddFriend} handleAcceptFriend={handleAcceptFriend} handleDeleteFriend={handleDeleteFriend} handleViewProfile={handleViewProfile}/>
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
           path="/wishlists"
           element={
             <ProtectedRoute user={user}>
@@ -131,7 +150,12 @@ const App = () => {
           path="/wishlists/:id"
           element={
             <ProtectedRoute user={user}>
-              <WishlistDetails wishlists={wishlists} />
+              <WishlistDetails 
+                wishlists={wishlists} 
+                items={items}
+                setItems = {setItems}
+                setWishlistId = {setWishlistId}
+              />
             </ProtectedRoute>
           }
         />
@@ -147,7 +171,7 @@ const App = () => {
           path="/wishlists/:id/new-item"
           element={
             <ProtectedRoute user={user}>
-              <NewItem />
+              <NewItem handleAddItem={handleAddItem} />
             </ProtectedRoute>
           }
         />
