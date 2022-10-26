@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import styles from './ProfileDetails.module.css'
 
 import * as profileService from '../../services/profileService'
 
@@ -22,12 +23,15 @@ const ProfileDetails = () => {
     <>
     { currProfile 
       ?
-      <div>
-        <img src={
+      <div className={styles.profileContainer}>
+        <div>
+          <img src={`/covers/cover2.jpg`} alt="cover" className={styles.cover}/>
+        <img className={styles.image} src={
           currProfile.photo
           ? currProfile.photo
         : `/avatars/${currentAvatar}.png`
         } alt='profile'/>
+        </div>
       <h1>{currProfile.name}</h1>
 
       <h2>WISHLISTS</h2>
