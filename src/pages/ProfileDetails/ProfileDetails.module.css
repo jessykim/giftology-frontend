@@ -11,17 +11,39 @@
   border-radius: 0;
   height: 200px;
   width: 100vw;
+  z-index: 1;
 }
 
 .image {
   width: 100px;
   height: 100px;
-  margin-top: -50px;
+  margin-top: -55px;
+}
+
+.profileName {
+  text-transform: capitalize;
+}
+
+.wishlistContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.wishlistBox {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 150px;
+  height: 200px;
 }
 
 @media (min-width: 600px) {
   .cover{
     height: 250px;
+    z-index: 0;
   }
 
   .image {
