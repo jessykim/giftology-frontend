@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams, Link, useNavigate } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 
 // import { wishlists } from "../../components/data"
 
@@ -13,7 +13,6 @@ import styles from "./WishlistDetails.module.css"
 import * as wishlistService from "../../services/wishlistService"
 
 const WishlistDetails = ({items, setItems, setWishlistId, handleDeleteItem}) => {
-  // const navigate = useNavigate()
   const { id } = useParams()
 
   const [wishlist, setWishlist] = useState({})
