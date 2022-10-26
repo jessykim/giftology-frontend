@@ -33,19 +33,24 @@ const ProfileDetails = () => {
                 : `/avatars/${currentAvatar}.png`
             } alt='profile' />
           </div>
+        
           <h1 className={styles.profileName}>{currProfile.name}</h1>
 
           <h2>WISHLISTS</h2>
-          <div className={styles.wishlistContainer}>
+          <div className={styles.container}>
           {currProfile.wishlists.length
             ? currProfile.wishlists.map((wishlist) => (
-                <div className={styles.wishlistBox}>
-                <p>{wishlist.name}</p>
-                <Link to={`/wishlists/${wishlist._id}`}>View wishlist</Link>
+              <article>
+                <div className={styles.title}>{wishlist.name}</div>
+                <div>
+                  <Link to={`/wishlists/${wishlist._id}`}>
+                    <button className={styles.viewButton}>View wishlist</button>
+                  </Link>
                 </div>
+              </article>
             ))
-            : <p>No wishlists yet</p>}
-            </div>
+            : <p>No wishlists yet </p>}
+          </div>
         </div>
         : <p> loading</p>
       }
