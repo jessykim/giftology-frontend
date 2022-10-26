@@ -19,6 +19,7 @@ import Friends from './pages/Friends/Friends'
 
 // components
 import NavBar from './components/NavBar/NavBar'
+// import Footer from './components/Footer/Footer'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
@@ -202,6 +203,7 @@ const App = () => {
           }
         />
       </Routes>
+      {/* <Footer /> */}
     </>
   )
 }
