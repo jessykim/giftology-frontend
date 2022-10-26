@@ -15,6 +15,7 @@ import EditWishlist from './pages/EditWishlist/EditWishlist'
 import NewItem from './pages/NewItem/NewItem'
 import EditItem from './pages/EditItem/EditItem'
 import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
+import Friends from './pages/Friends/Friends'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -115,6 +116,15 @@ const App = () => {
           element={
             <ProtectedRoute user={user}>
               <ProfileDetails user={user}/>
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/friends"
+          element={
+            <ProtectedRoute user={user}>
+              <Friends user={user} handleAddFriend={handleAddFriend} handleAcceptFriend={handleAcceptFriend} handleDeleteFriend={handleDeleteFriend} handleViewProfile={handleViewProfile}/>
             </ProtectedRoute>
           }
         />

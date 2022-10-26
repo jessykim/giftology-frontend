@@ -8,9 +8,12 @@
   box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
   -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
   -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
-  margin: 40px auto;
+  margin: 20px auto;
   display: flex;
   justify-content: space-between;
+}
+.container:hover {
+  background-color: #d7abbe;
 }
 
 img {
@@ -21,8 +24,10 @@ img {
   object-fit: cover;
 }
 
-p {
+.name {
   margin-top: 0;
+  color: #AC7088;
+  text-transform: capitalize;
 }
 
 .leftContainer {

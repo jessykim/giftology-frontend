@@ -32,11 +32,9 @@ let currentAvatar = avatarIds[Math.floor(Math.random()*(avatarIds.length))]
           ? props.profile.photo
         : `/avatars/${currentAvatar}.png`
         } alt='profile'/>
-          <p>{props.profile.name}</p>
+          <p className={styles.name}>{props.profile.name}</p>
         </div>
-        <div>
         <FriendRequest handleAddFriendClick={handleAddFriendClick} handleAcceptClick={handleAcceptClick} handleDeleteClick={handleDeleteClick} handleViewProfileClick={handleViewProfileClick} profile={props.profile} user={props.user} userProfile={props.userProfile} />
-        </div>
       </div>
     </>
   )
