@@ -12,10 +12,12 @@ import styles from "./WishlistDetails.module.css"
 // Services
 import * as wishlistService from "../../services/wishlistService"
 
-const WishlistDetails = ({items, setItems, setWishlistId, handleDeleteItem}) => {
+const WishlistDetails = ({user, items, setItems, setWishlistId, handleDeleteItem}) => {
   const { id } = useParams()
-
+  console.log(user.profile)
   const [wishlist, setWishlist] = useState({})
+
+
 
   useEffect(() => {
     const fetchWishlist = async () => {
@@ -38,9 +40,14 @@ const WishlistDetails = ({items, setItems, setWishlistId, handleDeleteItem}) => 
           <div className={styles.discription}>
             <p>{wishlist.description}</p>
           </div>
-          <Link to={`/wishlists/${wishlist._id}/new-item`} >
-            <button>Add Item</button>
-          </Link>
+          {user ?
+            <Link to={`/wishlists/${wishlist._id}/new-item`} >
+              {user.profile }
+              <button>Add Item</button>
+            </Link>
+          :
+            <div></div>
+          }
         </div>
         <div className={styles.cardsContainer}> 
           {items.map((item, idx) => (

@@ -163,6 +163,7 @@ const handleDeleteItem = async (itemId) => {
           element={
             <ProtectedRoute user={user}>
               <WishlistDetails 
+                user = {user}
                 wishlists={wishlists} 
                 items={items}
                 setItems = {setItems}
