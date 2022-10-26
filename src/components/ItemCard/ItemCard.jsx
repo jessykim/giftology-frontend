@@ -6,11 +6,6 @@ import styles from './ItemCard.module.css'
 // import AuthorInfo from "../AuthorInfo/AuthorInfo"
 
 const ItemCard = ({ item }) => {
-  const handleChange = ({ target }) => {
-    console.log(target)
-    // setForm({ ...form, [target.name]: target.value })
-  }
-  console.log("itemID", item._id)
   return (
     <>
       <article className={styles.container}>
