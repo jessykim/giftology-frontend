@@ -1,13 +1,14 @@
 .container{
-  /* border: 2px black solid; */
-  width:80%;
-  height: 30%;
-  background-color: #F8ECD1;
-  /* color: #774181; */
+  width:50vw;
+  max-width: 200px;
+  height: 20vh;
+  max-height: 200px;
+  background-color: #AC7088;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
   padding: 2% 3%;
   margin: 2%;
   border-radius: 20px;
@@ -15,11 +16,32 @@
 
 .container a{
   text-decoration: none;
-  color:purple;
   margin: 0;
 }
 
+.title{
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 5px;
+}
 
+.container article > *{
+  color: black;
+}
+
+.container div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardsContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 
 
