@@ -13,7 +13,6 @@
 
 .container *{
   width: 100%;
-  /* margin: 5px 0; */
   padding: 0;
 }
 
@@ -36,9 +35,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
-.purchased *{
-  margin:0;
+.purchased input,
+.purchased label{
   width: auto;
+  margin: 5px;
 }

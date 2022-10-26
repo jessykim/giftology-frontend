@@ -14,26 +14,22 @@ const ItemCard = ({ item }) => {
   return (
     <>
       <article className={styles.container}>
-        {/* <div className={styles.title}> */}
-          <img src={item.img} alt="img" className={styles.img} />
-          <h2>
-            {item.name}
-          </h2>
-        {/* </div> */}
-        {/* <div className={styles.info}> */}
-          <h5>{item.category}</h5>
-          <p>
-            {item.desc}
-          </p>
-          <div className={styles.purchased}>
-            <input type="checkbox" id="purchased-input" />
-            <label htmlFor="purchased-input">Purchased</label>
-          </div>
-          <a href={item.url}>
-            <button className={styles.buy}>Buy🛒</button>
-          </a>
-          <button>Delete</button>
-        {/* </div> */}
+        <img src={item.img} alt="img" className={styles.img} />
+        <h2>
+          {item.name}
+        </h2>
+        <h5>{item.category}</h5>
+        <p>
+          {item.desc}
+        </p>
+        <div className={styles.purchased}>
+          <label htmlFor="purchased-input">Purchased</label>
+          <input type="checkbox" id="purchased-input" />
+        </div>
+        <a href={item.url}>
+          <button className={styles.buy}>Buy🛒</button>
+        </a>
+        <button>Delete</button>
       </article>
       {/* <Link to="/wishlist/1/edit-item">
         <button onClick={() => handleChange()}>Edit</button>
