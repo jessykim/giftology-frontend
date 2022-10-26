@@ -8,7 +8,7 @@
 }
 
 .container button{
-  background-color: #DEB6AB;
+  background-color: white;
   border-radius: 5px;
   padding: 5px;
   width:70px;
@@ -17,3 +17,6 @@
   margin: 5px;
 }
 
+.container .create{
+  background-color: #AC7088;
+}

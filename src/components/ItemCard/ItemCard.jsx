@@ -14,27 +14,25 @@ const ItemCard = ({ item }) => {
   return (
     <>
       <article className={styles.container}>
-        <img src={item.img} alt="img" />
-        <div className={styles.info}>
-          <h2>
-            {item.name}
-          </h2>
-          <h5>{item.type}</h5>
-          <p>
-            {item.desc}
-          </p>
-          <div className={styles.purchased}>
-            <input type="checkbox" id="purchased-input" />
-            <label htmlFor="purchased-input">Purchased</label>
-          </div>
-          <a href={item.url}>
-            <button className={styles.buy}>Buy🛒</button>
-          </a>
-          <Link to={`/item/${item._id}/edit-item`} state={item}>
+        <img src={item.img} alt="img" className={styles.img} />
+        <h2>
+          {item.name}
+        </h2>
+        <h5>{item.category}</h5>
+        <p>
+          {item.desc}
+        </p>
+        <div className={styles.purchased}>
+          <label htmlFor="purchased-input">Purchased</label>
+          <input type="checkbox" id="purchased-input" />
+        </div>
+        <a href={item.url}>
+          <button className={styles.buy}>Buy🛒</button>
+        </a>
+        <Link to={`/item/${item._id}/edit-item`} state={item}>
             <button>Edit</button>
           </Link>
-          <button>Delete</button>
-        </div>
+        <button>Delete</button>
       </article>
     </>
   )
