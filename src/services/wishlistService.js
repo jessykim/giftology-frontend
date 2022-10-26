@@ -99,6 +99,22 @@ const createItem = async (itemData, id) => {
   }
 }
 
+const updateItem = async (itemData) => {
+  try {
+    const res = await fetch(`${BASE_URL}/item/${itemData._id}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(itemData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 
 export {
   index,
@@ -107,5 +123,6 @@ export {
   update,
   deleteWishlist,
   itemIndex,
-  createItem
+  createItem,
+  updateItem
 }

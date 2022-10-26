@@ -10,7 +10,7 @@ const ItemCard = ({ item }) => {
     console.log(target)
     // setForm({ ...form, [target.name]: target.value })
   }
-
+  console.log("itemID", item._id)
   return (
     <>
       <article className={styles.container}>
@@ -30,12 +30,12 @@ const ItemCard = ({ item }) => {
           <a href={item.url}>
             <button className={styles.buy}>Buy🛒</button>
           </a>
+          <Link to={`/item/${item._id}/edit-item`} state={item}>
+            <button>Edit</button>
+          </Link>
           <button>Delete</button>
         </div>
       </article>
-      {/* <Link to="/wishlist/1/edit-item">
-        <button onClick={() => handleChange()}>Edit</button>
-      </Link> */}
     </>
   )
 }
