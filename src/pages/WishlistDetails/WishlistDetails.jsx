@@ -12,7 +12,7 @@ import styles from "./WishlistDetails.module.css"
 // Services
 import * as wishlistService from "../../services/wishlistService"
 
-const WishlistDetails = ({items, setItems, setWishlistId}) => {
+const WishlistDetails = ({items, setItems, setWishlistId, handleDeleteItem}) => {
   // const navigate = useNavigate()
   const { id } = useParams()
 
@@ -45,7 +45,7 @@ const WishlistDetails = ({items, setItems, setWishlistId}) => {
         </div>
         <div className={styles.cardsContainer}> 
           {items.map((item, idx) => (
-            <ItemCard key={idx} item={item} />
+            <ItemCard key={idx} item={item} handleDeleteItem={handleDeleteItem} />
           ))}
         </div>
       </article>

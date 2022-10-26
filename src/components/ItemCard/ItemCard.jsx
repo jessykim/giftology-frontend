@@ -5,7 +5,7 @@ import styles from './ItemCard.module.css'
 // import Icon from "../Icon/Icon"
 // import AuthorInfo from "../AuthorInfo/AuthorInfo"
 
-const ItemCard = ({ item }) => {
+const ItemCard = ({ item, handleDeleteItem }) => {
   return (
     <>
       <article className={styles.container}>
@@ -27,7 +27,7 @@ const ItemCard = ({ item }) => {
         <Link to={`/item/${item._id}/edit-item`} state={item}>
             <button>Edit</button>
           </Link>
-        <button>Delete</button>
+        <button onClick={() => handleDeleteItem(item._id)}>Delete</button>
       </article>
     </>
   )
