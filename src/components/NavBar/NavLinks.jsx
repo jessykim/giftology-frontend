@@ -13,7 +13,7 @@ const NavLinks = ({ user, handleLogout, closeMobileMenu, isMobile }) => {
         ? isMobile ?
           <ul>
             <Link to="/" onClick={() => isMobile && closeMobileMenu()}><li>HOME</li></Link>
-            <li>{user.name}</li>
+            <Link><li>{user.name}</li></Link>
             <Link to="/profiles" onClick={() => isMobile && closeMobileMenu()}><li>PROFILES</li></Link>
             <Link to="/wishlists" onClick={() => isMobile && closeMobileMenu()}><li>WISHLISTS</li></Link>
             <Link to="/friends" onClick={() => isMobile && closeMobileMenu()}><li>FRIENDS</li></Link>
