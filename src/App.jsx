@@ -34,6 +34,9 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const [wishlists, setWishlists] = useState([])
 
+  const [items, setItems] = useState([])
+  const [wishlistId, setWishlistId] = useState([])
+
   const handleLogout = () => {
     authService.logout()
     setUser(null)
@@ -61,6 +64,12 @@ const App = () => {
     setWishlists(wishlists.filter(w => w._id !== deletedWishlist._id))
     navigate('/wishlists')
   }
+
+  const handleAddItem = async (itemData) => {
+  const newItem = await wishlistService.createItem(itemData, wishlistId)
+  setItems([newItem, ...items])
+  navigate(`/wishlists/${wishlistId}`)
+}
 
   useEffect(() => {
     const fetchWishlist = async () => {
@@ -141,7 +150,12 @@ const App = () => {
           path="/wishlists/:id"
           element={
             <ProtectedRoute user={user}>
-              <WishlistDetails wishlists={wishlists} />
+              <WishlistDetails 
+                wishlists={wishlists} 
+                items={items}
+                setItems = {setItems}
+                setWishlistId = {setWishlistId}
+              />
             </ProtectedRoute>
           }
         />
@@ -157,7 +171,7 @@ const App = () => {
           path="/wishlists/:id/new-item"
           element={
             <ProtectedRoute user={user}>
-              <NewItem />
+              <NewItem handleAddItem={handleAddItem} />
             </ProtectedRoute>
           }
         />
