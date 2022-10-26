@@ -77,6 +77,12 @@ const handleUpdateItem = async (itemData) => {
   navigate(`/wishlists/${wishlistId}`)
 }
 
+const handleDeleteItem = async (itemId) => {
+  const deletedItem = await wishlistService.deleteItem(wishlistId, itemId )
+  setItems(items.filter(i => i._id !== deletedItem._id))
+  navigate(`/wishlists/${wishlistId}`)
+}
+
   useEffect(() => {
     const fetchWishlist = async () => {
       const data = await wishlistService.index(user.profile)
@@ -161,6 +167,7 @@ const handleUpdateItem = async (itemData) => {
                 items={items}
                 setItems = {setItems}
                 setWishlistId = {setWishlistId}
+                handleDeleteItem = {handleDeleteItem}
               />
             </ProtectedRoute>
           }
