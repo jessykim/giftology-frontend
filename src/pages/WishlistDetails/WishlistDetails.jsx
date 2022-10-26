@@ -32,11 +32,11 @@ const WishlistDetails = (props) => {
   // if (!wishlist) return <Loading />
 
   return (
-    <main className={styles.container}>
-      <article>
+    <main className={styles.page}>
+      <article className={styles.container}>
         <div>
-        {/* <div className={styles.header}> */}
-          <h1>{wishlist.name}</h1>
+          {/* <div className={styles.header}> */}
+          <div className={styles.wishlistName}>{wishlist.name}</div>
           <div className={styles.discription}>
             <p>{wishlist.description}</p>
           </div>
