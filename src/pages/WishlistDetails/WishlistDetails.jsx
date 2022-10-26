@@ -28,7 +28,7 @@ const WishlistDetails = ({items, setItems, setWishlistId}) => {
       setWishlistId(id)
     }
     fetchWishlist()
-  }, [id])
+  }, [id, setItems, setWishlistId])
 
   return (
     <main className={styles.page}>
