@@ -6,9 +6,7 @@ import ItemForm from "../../components/ItemForm/ItemForm"
 const EditItem = ({handleUpdateItem}) => {
   const { state } = useLocation()
   const [itemForm, setItemForm] = useState(state)
-
-  console.log("FORM", itemForm)
-  
+   
   const handleChange = ({ target }) => {
     setItemForm({ ...itemForm, [target.name]: target.value })
   }
