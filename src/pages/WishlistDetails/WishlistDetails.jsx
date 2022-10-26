@@ -34,21 +34,16 @@ const WishlistDetails = ({user, items, setItems, setWishlistId, handleDeleteItem
   return (
     <main className={styles.page}>
       <article className={styles.container}>
-        <div>
+        {/* <div> */}
           {/* <div className={styles.header}> */}
           <div className={styles.wishlistName}>{wishlist.name}</div>
           <div className={styles.discription}>
             <p>{wishlist.description}</p>
           </div>
-          {user ?
-            <Link to={`/wishlists/${wishlist._id}/new-item`} >
-              {user.profile }
-              <button>Add Item</button>
-            </Link>
-          :
-            <div></div>
-          }
-        </div>
+          <Link to={`/wishlists/${wishlist._id}/new-item`} >
+            <button>Add Item</button>
+          </Link>
+        {/* </div> */}
         <div className={styles.cardsContainer}> 
           {items.map((item, idx) => (
             <ItemCard key={idx} item={item} handleDeleteItem={handleDeleteItem} />
