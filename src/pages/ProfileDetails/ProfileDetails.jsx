@@ -37,17 +37,17 @@ const ProfileDetails = () => {
           <h1 className={styles.profileName}>{currProfile.name}</h1>
 
           <h2>WISHLISTS</h2>
-          <div className={styles.container}>
+          <div className={styles.wishlistContainer}>
           {currProfile.wishlists.length
             ? currProfile.wishlists.map((wishlist) => (
-              <article>
+              <div className={styles.wishlistBox}>
                 <div className={styles.title}>{wishlist.name}</div>
                 <div>
                   <Link to={`/wishlists/${wishlist._id}`}>
                     <button className={styles.viewButton}>View wishlist</button>
                   </Link>
                 </div>
-              </article>
+              </div>
             ))
             : <p>No wishlists yet </p>}
           </div>
