@@ -9,12 +9,13 @@ const WishlistIndex = (props) => {
     <main className={styles.container}>
       <h1>Wishlist Index</h1>
       <Link to="/wishlists/new">
-        <button id="create">Create</button>
+        <button className={styles.create}>Create</button>
       </Link>
-
-      {wishlists.map((wishlist, idx) => (
-        <WishlistCard wishlist={wishlist} key={idx} handleDeleteWishlist={props.handleDeleteWishlist} />
-      ))}
+      <div className={styles.cardsContainer}>
+        {wishlists.map((wishlist, idx) => (
+          <WishlistCard wishlist={wishlist} key={idx} handleDeleteWishlist={props.handleDeleteWishlist} />
+        ))}
+      </div>
     </main>
   )
 }
