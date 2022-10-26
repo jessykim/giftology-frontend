@@ -1,6 +1,6 @@
 .navbar a{
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 80%;
   align-items: center;
 }
@@ -78,8 +78,7 @@ ul li a:hover {
     display: flex;
     margin-top: 15px;
     padding: 0 30px;
-  }
-  ul li {
+    color: white;
     margin: 0, 40px;
   }
 
