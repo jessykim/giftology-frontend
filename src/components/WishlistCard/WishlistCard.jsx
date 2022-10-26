@@ -11,12 +11,12 @@ const WishlistCard = ({ wishlist, handleDeleteWishlist }) => {
     <div className={styles.container}>
       <Link to={`/wishlists/${wishlist._id}/`}>
         <article>
-          <h2>
+          <div className={styles.title}>
             {wishlist.name}
-          </h2>
-          <p>
+          </div>
+          {/* <p>
             {wishlist.description}
-          </p>
+          </p> */}
         </article>
       </Link>
       <div>

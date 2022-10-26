@@ -5,7 +5,6 @@ import WishlistCard from "../../components/WishlistCard/WishlistCard"
 
 const WishlistIndex = (props) => {
   const wishlists = props.wishlists
-  // console.log(wishlists)
   return (
     <main className={styles.container}>
       <h1>Wishlist Index</h1>
