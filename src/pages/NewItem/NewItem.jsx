@@ -2,7 +2,7 @@ import { useState } from "react"
 import styles from './NewItem.module.css'
 import ItemForm from "../../components/ItemForm/ItemForm"
 
-const NewItem = (props) => {
+const NewItem = ({handleAddItem}) => {
   const [itemForm, setItemForm] = useState({
     name: '',
     type: '',
@@ -18,7 +18,7 @@ const NewItem = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-		// props.handleAddItem(form)
+		handleAddItem(itemForm)
   }
 
   return (
