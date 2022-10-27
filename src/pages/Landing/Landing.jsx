@@ -22,7 +22,7 @@ const Landing = ({ user }) => {
             <h2>About</h2>
             <img src="./giftology3.png" alt="giftology" id={styles.cursive} />
           </div>
-          <p className={styles.text}>Some feel confident when it comes to finding the perfect gift for others, while others do not. We're here to help you gift with ease and feel confident when deciding on what gifts to buy. Giftology can help facilitate the communication between gift givers and receivers. You will be able to create your own wishlists as well as view your friends' wishlists to know exactly what they need or want for the next special occasion.</p>
+          <p className={styles.text}>Some feel confident when it comes to finding the perfect gift for others, while others do not. We're here to help you gift with <span>ease</span> and feel <span>confident</span> when deciding what gifts to buy. Giftology helps facilitate the communication between gift <span>givers</span> and <span>receivers</span>. You will be able to create your own wishlists as well as view your friends' wishlists to know exactly what they need or want for the next special occasion.</p>
           <img src="./note2.png" alt="company note" id={styles.note} />
         </div>
       </section>
