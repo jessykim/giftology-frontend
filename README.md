@@ -1,4 +1,4 @@
-## __Title: Girftology__ 
+## __Title: Giftology__ 
 
 ## Getting Started: #
   * Check out it [here]()
@@ -36,8 +36,8 @@ Also, allow for reducing resource waste generated from gifting gone wrong.
   * Images: 
 
 ## Next Steps: 
-  - [x] Freindship system where user can send a freind request.
-  - [ ] Provide an option to receive a notification when a user sends a freind request
+  - [x] Friendship system where user can send a friend request.
+  - [ ] Provide an option to receive a notification when a user sends a friend request
   - [ ] Be able to create an event with a wishlist
   - [ ] Create a blog for gift suggestions
   - [x] Create a mobile friendly UI
