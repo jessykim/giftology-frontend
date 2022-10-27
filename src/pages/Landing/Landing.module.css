@@ -2,9 +2,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  /* height: 100vh; */
   background-color: #EBD9DD;
-  font-family: 'EB Garamond', serif;
+  /* font-family: 'EB Garamond', serif; */
+}
+
+.first {
+  background-image: url('../../../public/landing2.jpg');
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+}
+
+.first img {
+  position: absolute;
+  display: block;
+  margin-top: -5px;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
