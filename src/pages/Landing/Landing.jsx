@@ -5,15 +5,15 @@ const Landing = ({ user }) => {
     <main className={styles.page}>
       <section className={styles.first}>
         {/* <img src='/landing2.jpg' alt='landing page'/> */}
-        <div className={styles.container}>
+        {/* <div className={styles.container}> */}
           <div className={styles.welcomeStatement}>
               Welcome to Giftology,<br />
               {user ? user.name : 'friend'}!
           </div>
           <div className={styles.introduction}>
-            <p>Giftology helps you gift in confidence!</p>
+            <p>Here to help you gift in confidence!</p>
           </div>
-        </div>
+        {/* </div> */}
       </section>
       <section className={styles.second}>
         <h2>About Us</h2>
