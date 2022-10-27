@@ -13,7 +13,6 @@ const NavLinks = ({ user, handleLogout, closeMobileMenu, isMobile }) => {
         ? isMobile ?
           <ul>
             <Link to="/" onClick={() => isMobile && closeMobileMenu()}><li>HOME</li></Link>
-            <Link><li>{user.name}</li></Link>
             <Link to="/profiles" onClick={() => isMobile && closeMobileMenu()}><li>PROFILES</li></Link>
             <Link to="/wishlists" onClick={() => isMobile && closeMobileMenu()}><li>MY WISHLISTS</li></Link>
             <Link to="/friends" onClick={() => isMobile && closeMobileMenu()}><li>FRIENDS</li></Link>
@@ -22,8 +21,7 @@ const NavLinks = ({ user, handleLogout, closeMobileMenu, isMobile }) => {
           </ul >
           :
           <ul>
-            <Link to="/" className={styles.favicon}><img src="/favicon.ico" alt="favicon" /></Link>
-            <li>{user.name}</li>
+            <Link to="/" className={styles.logo}><img src="/gift2.png" alt="navbar logo" /></Link>
             <Link to="/profiles"><li>PROFILES</li></Link>
             <Link to="/wishlists"><li>MY WISHLISTS</li></Link>
             <Link to="/friends"><li>FRIENDS</li></Link>
@@ -31,8 +29,8 @@ const NavLinks = ({ user, handleLogout, closeMobileMenu, isMobile }) => {
           </ul>
         :
         <ul>
-          <Link to="/login" onClick={() => isMobile && closeMobileMenu()}><li>Log In</li></Link>
-          <Link to="/signup" onClick={() => isMobile && closeMobileMenu()}><li>Sign Up</li></Link>
+          <Link to="/login" onClick={() => isMobile && closeMobileMenu()}><li>LOG IN</li></Link>
+          <Link to="/signup" onClick={() => isMobile && closeMobileMenu()}><li>SIGN UP</li></Link>
         </ul>
       }
     </>

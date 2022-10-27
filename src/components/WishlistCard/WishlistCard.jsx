@@ -1,30 +1,24 @@
 import { Link } from "react-router-dom"
 import styles from './WishlistCard.module.css'
 
-// Components
-// import Icon from "../Icon/Icon"
-// import AuthorInfo from "../AuthorInfo/AuthorInfo"
-
 const WishlistCard = ({ wishlist, handleDeleteWishlist }) => {
   return (
-    <div className={styles.container}>
-      <Link to={`/wishlists/${wishlist._id}/`}>
-        <article>
-          <div className={styles.title}>
-            {wishlist.name}
+    <div>
+    <div className={styles.wishlistBox}>
+          <div className={styles.title}>{wishlist.name}</div>
+          <div>
+            <Link to={`/wishlists/${wishlist._id}`}>
+              <button className={styles.viewButton}>View wishlist</button>
+            </Link>
           </div>
-          {/* <p>
-            {wishlist.description}
-          </p> */}
-        </article>
-      </Link>
-      <div>
+          <div className={styles.buttonContainer}>
         <Link to={`/wishlists/${wishlist._id}/edit`} state={wishlist}>
-          <button>Edit</button>
+          <button className={styles.viewButton}>Edit</button>
         </Link>
-        <button onClick={() => handleDeleteWishlist(wishlist._id)}>Delete</button>
+        <button onClick={() => handleDeleteWishlist(wishlist._id)} className={styles.viewButton}>Delete</button>
+        </div>
+        </div>
       </div>
-    </div>
   )
 }
 
