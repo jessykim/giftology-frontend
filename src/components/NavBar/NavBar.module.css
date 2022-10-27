@@ -22,6 +22,9 @@ ul{
 .navbar{
   background-color: #ac7088;
   height: 5vh;
+  z-index: 3;
+  position: absolute;
+  width: 100%;
 }
 
 .navbar .mobileNavigation {
