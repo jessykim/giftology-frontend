@@ -27,7 +27,7 @@ const NavLinks = ({ user, handleLogout, closeMobileMenu, isMobile }) => {
             <Link to="/profiles"><li>PROFILES</li></Link>
             <Link to="/wishlists"><li>WISHLISTS</li></Link>
             <Link to="/friends"><li>FRIENDS</li></Link>
-            <Link to=""><li>LOG OUT</li></Link>
+            <Link to="" onClick={() => handleLogout()}><li>LOG OUT</li></Link>
           </ul>
         :
         <ul>
