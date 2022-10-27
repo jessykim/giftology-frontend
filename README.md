@@ -4,6 +4,9 @@
   * Check out it [here]()
 
 ## Background & Description
+Our goal for our aplication (Giftology) is to reduce the amount of hours trying to find the perfect gift to your loved ones.
+Giftology allows you to create your own wishlist and allow your friends to view your wishlists.
+Giftoloy will improve ... 
 
 ## Planning Materials
   * [Trello](https://trello.com/b/HzfImzvi/giftology) 
@@ -23,6 +26,7 @@
   * Mongoose
   * Bootstrap
   * Express (for backend)
+  * Node.js
 
 ## Credits: 
   * icons: 
@@ -37,3 +41,4 @@
   - [ ] Create a blog for gift suggestions
   - [x] Create a mobile friendly UI
   - [ ] Create a Secret Santa event, where each user will receive another user along with their wishlist
+  - [ ] Make wishlist public or private
