@@ -14,16 +14,14 @@ import * as wishlistService from "../../services/wishlistService"
 
 const WishlistDetails = ({user, items, setItems, setWishlistId, handleDeleteItem}) => {
   const { id } = useParams()
-  console.log(user)
   const [wishlist, setWishlist] = useState({})
-  console.log(wishlist)
+
   useEffect(() => {
     const fetchWishlist = async () => {
       const data = await wishlistService.show(id)
       setWishlist(data)
       const itemData = await wishlistService.itemIndex(id)
       setItems(itemData)
-
       setWishlistId(id)
     }
     fetchWishlist()

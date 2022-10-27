@@ -37,6 +37,7 @@ const App = () => {
   const [items, setItems] = useState([])
   const [wishlistId, setWishlistId] = useState([])
 
+
   const handleLogout = () => {
     authService.logout()
     setUser(null)
