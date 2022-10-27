@@ -10,9 +10,6 @@ ul {
   width: 100%;
   background-color: rgba(172, 112, 136, 0.75);
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .navbar {
@@ -20,9 +17,6 @@ ul {
   height: 6vh;
   z-index: 3;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .navbar a {
@@ -34,8 +28,10 @@ ul {
 
 .navbar .mobileNavigation {
   display: none;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
 }
-
 
 @media (max-width: 990px) {
   .navbar .navigation {
@@ -49,6 +45,7 @@ ul {
   .navbar .mobileNavigation .hamburger {
     position: absolute;
     right: 5%;
+    top:1vh;
     cursor: pointer;
   }
 
@@ -59,7 +56,9 @@ ul {
   }
 
   ul li {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     height: 50px;
     border-top: 1px solid #ac7088;
@@ -76,16 +75,15 @@ ul {
 }
 
 @media (min-width: 990px) {
-  .navbar {
-    height: 8vh;
-  }
-
   ul {
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   ul li {
@@ -101,9 +99,15 @@ ul {
     letter-spacing: 2px;
   }
 
+  .navbar {
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .navbar ul .logo {
     position: absolute;
-    /* top: -18px; */
     left: 5vw;
   }
 
@@ -117,7 +121,6 @@ ul {
     width: 55px;
     height: 55px;
   }
-
 
   .navigation {
     display: flex;
