@@ -45,7 +45,7 @@ const WishlistDetails = ({items, setItems, setWishlistId}) => {
         </div>
         <div className={styles.cardsContainer}> 
           {items.map((item, idx) => (
-            <ItemCard key={idx} item={item} />
+            <ItemCard key={idx} item={item} wishlistId={id} />
           ))}
         </div>
       </article>
