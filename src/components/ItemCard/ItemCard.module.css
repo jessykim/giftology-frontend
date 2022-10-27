@@ -85,10 +85,12 @@
 }
 
 .Btns {
-  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.Btns a{
+a{
   text-decoration: none;
   color: white;
 }
