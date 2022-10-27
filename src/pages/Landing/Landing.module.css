@@ -54,3 +54,24 @@
   text-align: center;
   margin: 20px 5px 10px 5px;
 }
+
+@media (max-width: 990px) {
+  .container {
+    margin-top: 35vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    height: 20vh;
+  }
+
+  .welcomeStatement{
+    font-size: 20px;
+  }
+
+  .introduction {
+    height: 20%;
+    font-size: 14px;
+  }
+}
