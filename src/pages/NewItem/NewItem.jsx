@@ -5,11 +5,11 @@ import ItemForm from "../../components/ItemForm/ItemForm"
 const NewItem = ({handleAddItem}) => {
   const [itemForm, setItemForm] = useState({
     name: '',
-    type: '',
+    category: 'Apparel',
     desc: '',
     url: '',
     img: '',
-    purchased: false,
+    purchased: { bought: false }
   })
 
   const handleChange = ({ target }) => {
