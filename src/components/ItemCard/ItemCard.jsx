@@ -34,6 +34,10 @@ const ItemCard = ({ item, wishlistId, handleDeleteItem, user }) => {
           {item.desc}
         </p>
         <div className={styles.purchased}>
+        
+          <button className={styles.Btns}><a href={item.url}>Buy   🛒</a></button>
+        
+        <div className={styles.purchasedInput}>
           <label htmlFor="purchased-input">Purchased</label>
           <input
             type="checkbox"
@@ -46,15 +50,13 @@ const ItemCard = ({ item, wishlistId, handleDeleteItem, user }) => {
               item.purchased.owner === user.profile || !item.purchased.owner ? false : true
             }
           />
+          </div>
         </div>
-        <a href={item.url}>
-          <button className={styles.buy}>Buy🛒</button>
-        </a>
         <div className={styles.bottomBtns}>
 
-          <button><Link to={`/item/${item._id}/edit-item`} state={item}>Edit</Link></button>
+          <button className={styles.Btns}><Link to={`/item/${item._id}/edit-item`} state={item}>Edit</Link></button>
 
-          <button onClick={() => handleDeleteItem(item._id)}>Delete</button>
+          <button onClick={() => handleDeleteItem(item._id) } className={styles.Btns}>Delete</button>
         </div>
       </article>
     </>

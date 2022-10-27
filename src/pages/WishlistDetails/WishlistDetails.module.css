@@ -1,5 +1,5 @@
 .page{
-  background-color: #EBD9DD;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -13,7 +13,6 @@
   flex-direction: column;
   min-height: 95vh;
   text-align: center;
-  /* border: 2px solid black; */
   width: 95vw;
   padding: 10px;
 }
@@ -33,7 +32,6 @@
   justify-content: center;
   border-radius: 15px;
   text-align: center;
-  background-color: rgba(172, 112, 136,.5);
 
   font-weight: bold;
   min-height: 80px;
@@ -48,15 +46,23 @@
   background-color: #AC7088;
   border-radius: 5px;
   padding: 5px;
-  width:70px;
+  width:100px;
+  height: 30px;
   border: none;
   font-size: 15px;
   margin: 0;
+  color: white;
+}
+
+.container button:hover {
+  background-color: white;
+  border: #AC7088 solid 1px;
+  color: #AC7088;
+  cursor: pointer;
 }
 
 .wishlistName{
   font-size: 30px;
   background-color: rgba(172, 112, 136,.5);
-  border-radius: 10px;
   width: 100%;
 }
