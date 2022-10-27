@@ -1,11 +1,28 @@
 import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
 import styles from './ItemCard.module.css'
 
-// Components
-// import Icon from "../Icon/Icon"
-// import AuthorInfo from "../AuthorInfo/AuthorInfo"
+// Services
+import * as wishlistService from '../../services/wishlistService'
 
-const ItemCard = ({ item, handleDeleteItem }) => {
+const ItemCard = ({ item, wishlistId, handleDeleteItem }) => {
+  const [itemPurchase, setItemPurchase] = useState(item.purchased.bought)
+  // console.log(itemPurchase, 'itemPurchase')
+  console.log(item.purchased.bought)
+  
+  const handlePurchaseItem = async (itemId, wishlistId) => {
+    const updatedItem = await wishlistService.updatePurchased(itemId, wishlistId)
+    setItemPurchase(updatedItem.purchased.bought)
+    // console.log(updatedItem.purchased.bought)
+  }
+
+  useEffect(() => {
+    const fetchItemPurchase = async () => {
+      setItemPurchase(item.purchased.bought)
+    }
+    fetchItemPurchase()
+  }, [item])
+
   return (
     <>
       <article className={styles.container}>
@@ -19,7 +36,14 @@ const ItemCard = ({ item, handleDeleteItem }) => {
         </p>
         <div className={styles.purchased}>
           <label htmlFor="purchased-input">Purchased</label>
-          <input type="checkbox" id="purchased-input" />
+          <input 
+            type="checkbox" 
+            id="purchased-input" 
+            name="purchased"
+            value={itemPurchase}
+            onChange={() => handlePurchaseItem(item._id, wishlistId)}
+            checked={itemPurchase}
+          />
         </div>
         <a href={item.url}>
           <button className={styles.buy}>Buy🛒</button>
