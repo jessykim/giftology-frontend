@@ -67,6 +67,7 @@ const App = () => {
 
   const handleAddItem = async (itemData) => {
   const newItem = await wishlistService.createItem(itemData, wishlistId)
+  console.log(newItem)
   setItems([newItem, ...items])
   navigate(`/wishlists/${wishlistId}`)
 }
