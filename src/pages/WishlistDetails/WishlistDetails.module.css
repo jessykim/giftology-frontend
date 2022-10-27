@@ -1,5 +1,5 @@
 .page{
-  background-color: #ECCCB2;
+  background-color: #EBD9DD;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -16,12 +16,6 @@
   /* border: 2px solid black; */
   width: 95vw;
   padding: 10px;
-}
-
-.container *{
-  width:90%;
-  margin: 10px 0;
-  /* padding: 5px 0; */
 }
 
 .cardsContainer{
