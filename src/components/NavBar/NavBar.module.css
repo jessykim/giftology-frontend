@@ -23,7 +23,7 @@ ul{
   background-color: #ac7088;
   height: 5vh;
   z-index: 3;
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
 }
 
