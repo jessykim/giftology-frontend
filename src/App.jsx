@@ -37,6 +37,7 @@ const App = () => {
   const [items, setItems] = useState([])
   const [wishlistId, setWishlistId] = useState([])
 
+
   const handleLogout = () => {
     authService.logout()
     setUser(null)
@@ -67,6 +68,7 @@ const App = () => {
 
   const handleAddItem = async (itemData) => {
   const newItem = await wishlistService.createItem(itemData, wishlistId)
+  console.log(newItem)
   setItems([newItem, ...items])
   navigate(`/wishlists/${wishlistId}`)
 }
@@ -163,6 +165,7 @@ const handleDeleteItem = async (itemId) => {
           element={
             <ProtectedRoute user={user}>
               <WishlistDetails 
+                user = {user}
                 wishlists={wishlists} 
                 items={items}
                 setItems = {setItems}

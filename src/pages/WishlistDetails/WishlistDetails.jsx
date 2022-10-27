@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams, Link, useNavigate } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 
 // import { wishlists } from "../../components/data"
 
@@ -12,10 +12,8 @@ import styles from "./WishlistDetails.module.css"
 // Services
 import * as wishlistService from "../../services/wishlistService"
 
-const WishlistDetails = ({items, setItems, setWishlistId, handleDeleteItem}) => {
-  // const navigate = useNavigate()
+const WishlistDetails = ({user, items, setItems, setWishlistId, handleDeleteItem}) => {
   const { id } = useParams()
-
   const [wishlist, setWishlist] = useState({})
 
   useEffect(() => {
@@ -24,7 +22,6 @@ const WishlistDetails = ({items, setItems, setWishlistId, handleDeleteItem}) => 
       setWishlist(data)
       const itemData = await wishlistService.itemIndex(id)
       setItems(itemData)
-
       setWishlistId(id)
     }
     fetchWishlist()
@@ -39,13 +36,17 @@ const WishlistDetails = ({items, setItems, setWishlistId, handleDeleteItem}) => 
           <div className={styles.discription}>
             <p>{wishlist.description}</p>
           </div>
-          <Link to={`/wishlists/${wishlist._id}/new-item`} >
-            <button>Add Item</button>
-          </Link>
+          {user.profile === wishlist.author ?
+            <Link to={`/wishlists/${wishlist._id}/new-item`} >
+              <button>Add Item</button>
+            </Link>
+          :
+            <div></div>
+          }
         {/* </div> */}
         <div className={styles.cardsContainer}> 
           {items.map((item, idx) => (
-            <ItemCard key={idx} item={item} handleDeleteItem={handleDeleteItem} />
+            <ItemCard user={user} key={idx} item={item} handleDeleteItem={handleDeleteItem} wishlistId={id} />
           ))}
         </div>
       </article>

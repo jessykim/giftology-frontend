@@ -48,6 +48,7 @@ const SignupForm = props => {
       onSubmit={handleSubmit}
       className={styles.container}
     >
+      <h1 className={styles.signupH1}>Sign Up</h1>
       <div className={styles.inputContainer}>
         <label htmlFor="name" className={styles.label}>Name</label>
         <input
@@ -57,6 +58,7 @@ const SignupForm = props => {
           value={name}
           name="name"
           onChange={handleChange}
+          placeholder="Preferred name"
         />
       </div>
       <div className={styles.inputContainer}>
@@ -68,6 +70,7 @@ const SignupForm = props => {
           value={email}
           name="email"
           onChange={handleChange}
+          placeholder="user@giftolofy.com"
         />
       </div>
       <div className={styles.inputContainer}>
@@ -79,6 +82,7 @@ const SignupForm = props => {
           value={password}
           name="password"
           onChange={handleChange}
+          placeholder="******"
         />
       </div>
       <div className={styles.inputContainer}>
@@ -92,6 +96,7 @@ const SignupForm = props => {
           value={passwordConf}
           name="passwordConf"
           onChange={handleChange}
+          placeholder="******"
         />
       </div>
       <div className={styles.inputContainer}>
@@ -105,7 +110,7 @@ const SignupForm = props => {
           onChange={handleChangePhoto}
         />
       </div>
-      <div className={styles.inputContainer}>
+      <div>
         <button disabled={isFormInvalid()} className={styles.button}>
           Sign Up
         </button>
