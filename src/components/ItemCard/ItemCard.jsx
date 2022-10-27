@@ -7,13 +7,10 @@ import * as wishlistService from '../../services/wishlistService'
 
 const ItemCard = ({ item, wishlistId, handleDeleteItem, user }) => {
   const [itemPurchase, setItemPurchase] = useState(false)
-  // console.log(itemPurchase, 'itemPurchase')
-  // console.log(item.purchased.bought)
 
   const handlePurchaseItem = async (itemId, wishlistId) => {
     const updatedItem = await wishlistService.updatePurchased(itemId, wishlistId)
     setItemPurchase(updatedItem.purchased.bought)
-    // console.log("update", updatedItem.purchased.bought)
   }
 
   useEffect(() => {
@@ -30,7 +27,9 @@ const ItemCard = ({ item, wishlistId, handleDeleteItem, user }) => {
         <h2>
           {item.name}
         </h2>
+        <span>Category:</span>
         <h5>{item.category}</h5>
+        <span>Description:</span>
         <p>
           {item.desc}
         </p>
@@ -47,18 +46,16 @@ const ItemCard = ({ item, wishlistId, handleDeleteItem, user }) => {
               item.purchased.owner === user.profile || !item.purchased.owner ? false : true
             }
           />
-          {/* {console.log("item", item)}
-          {console.log("Bought", item.purchased.bought)}
-          {console.log("userProfile", user.profile)}
-          {console.log("owner", item.purchased.owner)} */}
         </div>
         <a href={item.url}>
           <button className={styles.buy}>Buy🛒</button>
         </a>
-        <Link to={`/item/${item._id}/edit-item`} state={item}>
-          <button>Edit</button>
-        </Link>
-        <button onClick={() => handleDeleteItem(item._id)}>Delete</button>
+        <div className={styles.bottomBtns}>
+
+          <button><Link to={`/item/${item._id}/edit-item`} state={item}>Edit</Link></button>
+
+          <button onClick={() => handleDeleteItem(item._id)}>Delete</button>
+        </div>
       </article>
     </>
   )
