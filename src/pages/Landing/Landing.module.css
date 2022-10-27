@@ -9,10 +9,10 @@
 }
 
 .first {
-  background-image: url('../../../public/landing2.png');
+  background-image: url('../../../public/landing.jpg');
   background-position: top;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position-x: center;
   display: flex;
   flex-direction: column;
