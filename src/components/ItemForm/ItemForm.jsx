@@ -2,7 +2,7 @@ import styles from "./ItemForm.module.css"
 
 const ItemForm = (props) => {
   return (
-    <form onSubmit={props.handleSubmit} className={styles.itemForm}>
+    <form onSubmit={props.handleSubmit} className={styles.container}>
       <label htmlFor="name-input">Name</label>
       <input
         required
