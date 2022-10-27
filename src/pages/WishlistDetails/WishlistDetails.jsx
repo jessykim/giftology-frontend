@@ -42,9 +42,12 @@ const WishlistDetails = ({user, items, setItems, setWishlistId, handleDeleteItem
             <div></div>
           }
         <div className={styles.cardsContainer}> 
-          {items.map((item, idx) => (
-            <ItemCard user={user} key={idx} item={item} handleDeleteItem={handleDeleteItem} wishlistId={id} />
-          ))}
+        {items.length ?
+          items.map((item, idx) => (
+            <ItemCard user={user} key={idx} item={item} handleDeleteItem={handleDeleteItem} wishlistId={id} author ={wishlist.author}/>
+          ))
+          : <p>No wishlists yet!</p>
+        }
         </div>
       </article>
     </main>

@@ -5,7 +5,7 @@ import styles from './ItemCard.module.css'
 // Services
 import * as wishlistService from '../../services/wishlistService'
 
-const ItemCard = ({ item, wishlistId, handleDeleteItem, user }) => {
+const ItemCard = ({ item, wishlistId, handleDeleteItem, user, author }) => {
   const [itemPurchase, setItemPurchase] = useState(false)
 
   const handlePurchaseItem = async (itemId, wishlistId) => {
@@ -53,10 +53,16 @@ const ItemCard = ({ item, wishlistId, handleDeleteItem, user }) => {
           </div>
         </div>
         <div className={styles.bottomBtns}>
-
+        {user.profile === author ?
           <button className={styles.Btns}><Link to={`/item/${item._id}/edit-item`} state={item}>Edit</Link></button>
-
+          : 
+          null
+        }
+        {user.profile === author ?
           <button onClick={() => handleDeleteItem(item._id) } className={styles.Btns}>Delete</button>
+          :
+          null
+        }
         </div>
       </article>
     </>
