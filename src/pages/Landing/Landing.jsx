@@ -3,6 +3,7 @@ import styles from './Landing.module.css'
 const Landing = ({ user }) => {
   return (
     <main className={styles.page}>
+          <img src='/landing2.jpg' alt='landing page'/>
       <div className={styles.container}>
         <div className={styles.welcomeStatement}>
             Welcome to Giftology,<br />

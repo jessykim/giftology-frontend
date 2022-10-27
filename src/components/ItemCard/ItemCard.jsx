@@ -5,7 +5,7 @@ import styles from './ItemCard.module.css'
 // Services
 import * as wishlistService from '../../services/wishlistService'
 
-const ItemCard = ({ item, wishlistId }) => {
+const ItemCard = ({ item, wishlistId, handleDeleteItem }) => {
   const [itemPurchase, setItemPurchase] = useState(item.purchased.bought)
   // console.log(itemPurchase, 'itemPurchase')
   // console.log(item.purchased.bought)
@@ -52,7 +52,7 @@ const ItemCard = ({ item, wishlistId }) => {
         <Link to={`/item/${item._id}/edit-item`} state={item}>
             <button>Edit</button>
           </Link>
-        <button>Delete</button>
+        <button onClick={() => handleDeleteItem(item._id)}>Delete</button>
       </article>
     </>
   )

@@ -129,6 +129,20 @@ const updatePurchased = async (itemId, wishlistId) => {
   }
 }
 
+const deleteItem = async (wishlistId, itemId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${wishlistId}/item/${itemId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   show,
@@ -138,5 +152,6 @@ export {
   itemIndex,
   createItem,
   updateItem,
-  updatePurchased
+  updatePurchased,
+  deleteItem
 }

@@ -2,28 +2,101 @@
   text-decoration: none;
   color: white;
   font-size: 80%;
-}
-
-.navbar ul{
-  padding: 1%;
+  align-items: center;
 }
 
 ul{
   list-style-type: none;
-  display: flex;
   align-items: center;
-  justify-content: space-around;
-  margin: 0;
-  padding: 15px 5px;
   font-size: 100%;
   font-weight: bold;
-  /* width: 100vw; */
+  z-index: 2;
+  margin-top: 30px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(172, 112, 136, 0.75);
+  padding: 0;
 }
 
 .navbar{
-  background-color: #AC7088;
+  background-color: #ac7088;
   height: 5vh;
+  z-index: 3;
+  /* position: absolute; */
+  width: 100%;
 }
+
+.navbar .mobileNavigation {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .navbar .navigation {
+    display: none;
+  }
+  .navbar .mobileNavigation {
+    display: flex;
+  }
+  .navbar .mobileNavigation .hamburger {
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+  }
+  .navbar .nav .ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+
+  ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    border-top: 1px solid #ac7088;
+  }
+
+  ul li:hover {
+    background-color: #ac7088;
+    color: white;
+  }
+
+ul li a:hover {
+  color: white;
+}
+}
+
+@media (min-width: 990px) {
+  ul{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  ul li {
+    display: flex;
+    margin-top: 15px;
+    padding: 0 30px;
+    color: white;
+    margin: 0, 40px;
+  }
+
+  .navbar ul .favicon {
+    position: absolute;
+    left: 5vw;
+  }
+
+  .navbar ul .favicon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
+  }
+}
+
 
 
 
