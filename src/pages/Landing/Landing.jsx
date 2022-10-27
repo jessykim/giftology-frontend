@@ -13,8 +13,11 @@ const Landing = ({ user }) => {
                 {user ? user.name : 'friend'}!
               </p>
             </div>
+            <div className={styles.favlogo}>
+              <img src="/favlogo.jpg" alt="favicon logo"/>
+            </div>
             <div className={styles.introduction}>
-              <p>Here to help you gift in confidence!</p>
+              <p>We're here to help you gift in confidence!</p>
             </div>
           </div>
         {/* </div> */}

@@ -12,7 +12,7 @@ const WishlistIndex = (props) => {
       </Link>
     <main className={styles.innerContainer}>
         {wishlists.map((wishlist, idx) => (
-          <WishlistCard wishlist={wishlist} idx={idx}/>
+          <WishlistCard wishlist={wishlist} key={idx}/>
         ))}
     </main>
     </div>
