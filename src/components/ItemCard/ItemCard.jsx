@@ -6,10 +6,10 @@ import styles from './ItemCard.module.css'
 import * as wishlistService from '../../services/wishlistService'
 
 const ItemCard = ({ item, wishlistId, handleDeleteItem }) => {
-  const [itemPurchase, setItemPurchase] = useState(item.purchased.bought)
+  const [itemPurchase, setItemPurchase] = useState(false)
   // console.log(itemPurchase, 'itemPurchase')
-  // console.log(item.purchased.bought)
-
+  console.log(item.purchased.bought)
+  
   const handlePurchaseItem = async (itemId, wishlistId) => {
     const updatedItem = await wishlistService.updatePurchased(itemId, wishlistId)
     setItemPurchase(updatedItem.purchased.bought)
@@ -22,7 +22,6 @@ const ItemCard = ({ item, wishlistId, handleDeleteItem }) => {
     }
     fetchItemPurchase()
   }, [item])
-
 
   return (
     <>

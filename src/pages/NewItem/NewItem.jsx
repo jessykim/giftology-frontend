@@ -9,7 +9,7 @@ const NewItem = ({handleAddItem}) => {
     desc: '',
     url: '',
     img: '',
-    purchased: { bought: false }
+    purchased: { bought: false },
   })
 
   const handleChange = ({ target }) => {
