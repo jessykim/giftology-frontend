@@ -5,8 +5,8 @@ import Navigation from './Navigation'
 const NavBar = ({ user, handleLogout }) => {
   return (
     <div className={styles.navbar}>
-    <MobileNavBar user={ user } handleLogout={handleLogout}/>
-    <Navigation user={ user } handleLogout={handleLogout}/>
+      <MobileNavBar user={user} handleLogout={handleLogout} />
+      <Navigation user={user} handleLogout={handleLogout} />
     </div>
   )
 }
