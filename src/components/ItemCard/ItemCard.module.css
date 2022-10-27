@@ -4,21 +4,16 @@
   justify-content: center;
   flex-direction: column;
   padding: 2% 3%;
-  width: 100%;
+  max-width: 300px;
   margin: 5%;
-  background-color: #F5E8C7;
-  border-radius: 20px;
+  background-color: #AC7088;;
   padding: 20px;
-}
-
-.container *{
-  width: 100%;
-  padding: 0;
+  
 }
 
 .container .img{
   height: auto;
-  width:60vw;
+  width:100%;
   border-radius: 10px;
 }
 
@@ -42,4 +37,31 @@
 .purchased label{
   width: auto;
   margin: 5px;
+}
+
+.bottomBtns {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  
+}
+
+.bottomBtns button{
+  color: white;
+  border: 1px solid white;
+}
+
+.bottomBtns button:hover{ 
+  cursor: pointer;
+  background-color: #eadde0;
+  color: #AC7088;
+}
+
+.bottomBtns a {
+  text-decoration: none;
+  color: white;
+}
+
+.bottomBtns a:hover {
+  color: #AC7088;
 }
