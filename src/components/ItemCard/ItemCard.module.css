@@ -3,10 +3,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 2% 3%;
+  padding: 1% 3%;
   max-width: 300px;
   margin: 5%;
-  background-color: #AC7088;;
+  background-color: #EBD9DD;
   padding: 20px;
   
 }
@@ -17,33 +17,50 @@
   border-radius: 10px;
 }
 
-.container button{
-  background-color: #DEB6AB;
-  border-radius: 5px;
-  padding: 5px;
-  width:60px;
-  border: none;
-  font-size: 15px;
-}
-
 .purchased{
   display: flex;
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-evenly;
+  color: white;
 }
 
-.purchased input,
-.purchased label{
-  width: auto;
-  margin: 5px;
+.purchasedInput{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #AC7088;
+  height: 35px;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.purchasedInput:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #AC7088;
+}
+
+.purchased button a{
+  color: white;
+}
+
+.purchased button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #AC7088;
+}
+
+.purchased button a:hover {
+  color: #AC7088;
 }
 
 .bottomBtns {
+  margin-top: 30px;
   display: flex;
   width: 100%;
   justify-content: space-around;
-  
 }
 
 .bottomBtns button{
@@ -53,11 +70,11 @@
 
 .bottomBtns button:hover{ 
   cursor: pointer;
-  background-color: #eadde0;
+  background-color: white;
   color: #AC7088;
 }
 
-.bottomBtns a {
+.bottomBtns a{
   text-decoration: none;
   color: white;
 }
@@ -65,3 +82,13 @@
 .bottomBtns a:hover {
   color: #AC7088;
 }
+
+.Btns {
+  border: 1px solid white;
+}
+
+.Btns a{
+  text-decoration: none;
+  color: white;
+}
+

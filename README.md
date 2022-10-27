@@ -1,16 +1,19 @@
-## __Title: Giftology__ 
+## __Title: Giftology 🎁__ 
 
-## Getting Started: #
-  * Check out it [here]()
-
-## Background & Description
+## Description
 Our goal for our application (Giftology) is to reduce the number of hours trying to find the perfect gift for your loved ones.
 Giftology allows you to create your wishlist and let your friends view your wishlists.
 It allows users to improve their gift-giving experience by facilitating the communication between gift-givers and receivers.
 Also, allow for reducing resource waste generated from gifting gone wrong.
 
+## Getting Started: #
+  * Check out Giftology 👉🏼 [here]()
+
 ## Planning Materials
   * [Trello](https://trello.com/b/HzfImzvi/giftology) 
+
+## Back-end GitHub Repository
+  * [Backend of Giftology](https://github.com/creyes25/giftology-backend)
 
 ## Screenshots: 
  ![alt text]()
@@ -28,6 +31,12 @@ Also, allow for reducing resource waste generated from gifting gone wrong.
   * Bootstrap
   * Express (for backend)
   * Node.js
+
+## Contributors
+  * [Anchi Chen](https://github.com/chenannchi)
+  * [Ana Weidenkopf](https://github.com/AWeidenkopf)
+  * [Jessica Kim](https://github.com/jessykim)
+  * [Carolina Reyes](https://github.com/creyes25)
 
 ## Credits: 
   * icons: 
