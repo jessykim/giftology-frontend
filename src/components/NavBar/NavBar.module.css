@@ -85,8 +85,14 @@ ul li a:hover {
     margin: 0, 40px;
   }
 
+  ul li:hover {
+    font-weight: bolder;
+    letter-spacing: 2px;
+  }
+
   .navbar ul .favicon {
     position: absolute;
+    top: -18px;
     left: 5vw;
   }
 
@@ -94,6 +100,11 @@ ul li a:hover {
     width: 50px;
     height: 50px;
     border-radius: 0;
+  }
+
+  .navbar ul .favicon img:hover {
+    width: 55px;
+    height: 55px;
   }
 
   .navbar {
