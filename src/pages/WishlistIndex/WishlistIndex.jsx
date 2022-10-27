@@ -7,10 +7,10 @@ const WishlistIndex = (props) => {
   return (
     <div className={styles.outerContainer}>
       <h1>WISHLISTS</h1>
-    <main className={styles.innerContainer}>
       <Link to="/wishlists/new">
         <button className={styles.create}>Create</button>
       </Link>
+    <main className={styles.innerContainer}>
         {wishlists.map((wishlist, idx) => (
           <WishlistCard wishlist={wishlist} idx={idx}/>
         ))}
