@@ -29,7 +29,7 @@ const Friends = (props) => {
       {props.userProfile.friends.some(isFriendRequester)
         ? <p>Request sent!</p>
         : props.userProfile.friends.some(isFriendRecipient)
-          ? <button onClick={(() => props.handleAcceptClick(props.profile._id))}>accept</button>
+          ? <button className={styles.btn} onClick={(() => props.handleAcceptClick(props.profile._id))}>Accept</button>
           : props.userProfile.friends.some(isFriend)
           ? <div>
             <div>
