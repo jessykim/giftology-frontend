@@ -30,7 +30,7 @@
   justify-content: center;
   align-items: center;
   background-color: #AC7088;
-  height: 35px;
+  height: 31px;
   border-radius: 5px;
   padding-left: 10px;
   font-weight: bold;
@@ -40,6 +40,7 @@
   cursor: pointer;
   background-color: white;
   color: #AC7088;
+  border: 1px solid #AC7088;
 }
 
 .purchased button a{
@@ -65,7 +66,6 @@
 
 .bottomBtns button{
   color: white;
-  border: 1px solid white;
 }
 
 .bottomBtns button:hover{ 
