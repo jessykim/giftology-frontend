@@ -8,16 +8,13 @@ const Landing = ({ user }) => {
         {/* <div className={styles.container}> */}
           <div className={styles.welcome}>
             <div className={styles.statement}>
-              <p>
-                Welcome to Giftology,<br />
-                {user ? user.name : 'friend'}!
-              </p>
+              Welcome to Giftology,<br />{user ? user.name : 'friend'}!
             </div>
             <div className={styles.favlogo}>
               <img src="/favicon.ico" alt="favicon logo"/>
             </div>
             <div className={styles.introduction}>
-              <p>We're here to help you gift in confidence!</p>
+              We're here to help you gift in <span>confidence</span>!
             </div>
           </div>
         {/* </div> */}
