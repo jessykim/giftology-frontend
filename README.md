@@ -39,10 +39,10 @@ Also, allow for reducing resource waste generated from gifting gone wrong.
   * [Carolina Reyes](https://github.com/creyes25)
 
 ## Credits: 
-  * icons: 
+  * icons/avatar: https://www.flaticon.com/free-icons/animal-avatar
   * Fonts : 
   * Images: https://unsplash.com/
-  * Avatar: https://www.flaticon.com/free-icons/animal-avatar
+
 
 ## Next Steps: 
   - [x] Friendship system where user can send a friend request.
