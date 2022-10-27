@@ -10,13 +10,13 @@ span {
   /* height: 100vh; */
   background-color: #EBD9DD;
   /* font-family: 'EB Garamond', serif; */
+  color: rgba(0, 0, 0, 0.67);
 }
 
 .first {
   background-image: url('../../../public/landing.jpg');
   background-position: top;
   background-size: cover;
-  /* background-attachment: fixed; */
   background-position-x: center;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,6 @@ span {
 
 .welcome {
   font-size: 30px;
-  /* background-color: rgb(222,182,171, 0.70); */
   height: 70%;
   display: flex;
   flex-direction: column;
@@ -40,11 +39,9 @@ span {
   background-color: rgba(222, 182, 171, 0.445); 
   width: 100%;
   padding: 20px 0px;
-  color: rgba(0, 0, 0, 0.67);
 }
 
 .favlogo > img {
-  /* border: 1px solid red; */
   margin: 0px;
   border-radius: 0%;
   width: 120px;
@@ -56,9 +53,49 @@ span {
 }
 
 .introduction{
-  color: rgba(0, 0, 0, 0.67);
+  font-size: 15px;
 }
 
+.second {
+  display: flex;
+  padding: 40px;
+}
+
+.second > div {
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutTitle > h2 {
+  margin: 10px;
+}
+
+.text {
+  font-size: 12px;
+}
+
+#cursive {
+  margin: 0px;
+  height: 60%;
+  width: 100%;
+  border-radius: 0%;
+}
+
+#note {
+  height: 250px;
+  width: 250px;
+  border-radius: 0%;
+  margin: 20px 0;
+}
 
 /* .first img {
   position: absolute;
@@ -117,12 +154,12 @@ span {
     height: 20vh;
   }
 
-  .welcomeStatement{
+  /* .welcomeStatement{
     font-size: 20px;
   }
 
   .introduction {
     height: 20%;
     font-size: 14px;
-  }
+  } */
 }
