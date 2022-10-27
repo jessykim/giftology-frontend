@@ -6,12 +6,16 @@ const Landing = ({ user }) => {
       <section className={styles.first}>
         {/* <img src='/landing2.jpg' alt='landing page'/> */}
         {/* <div className={styles.container}> */}
-          <div className={styles.welcomeStatement}>
-              Welcome to Giftology,<br />
-              {user ? user.name : 'friend'}!
-          </div>
-          <div className={styles.introduction}>
-            <p>Here to help you gift in confidence!</p>
+          <div className={styles.welcome}>
+            <div className={styles.statement}>
+              <p>
+                Welcome to Giftology,<br />
+                {user ? user.name : 'friend'}!
+              </p>
+            </div>
+            <div className={styles.introduction}>
+              <p>Here to help you gift in confidence!</p>
+            </div>
           </div>
         {/* </div> */}
       </section>
