@@ -1,4 +1,4 @@
-## __Title: Giftology__ 
+## __Title: ℊiftology 🎁 __ 
 
 ## Description
 Our goal for our application (Giftology) is to reduce the number of hours trying to find the perfect gift for your loved ones.
@@ -7,7 +7,7 @@ It allows users to improve their gift-giving experience by facilitating the comm
 Also, allow for reducing resource waste generated from gifting gone wrong.
 
 ## Getting Started: #
-  * Check out Giftology [here]()
+  * Check out Giftology ☞ [here]()
 
 ## Planning Materials
   * [Trello](https://trello.com/b/HzfImzvi/giftology) 
