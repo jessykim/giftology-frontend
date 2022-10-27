@@ -29,3 +29,16 @@
   background-color: #eadde0;
   color: #AC7088;
 }
+
+@media (min-width: 990px) {
+  .innerContainer {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .innerContainer .create {
+    position: absolute;
+    margin-top: -20vh;
+    margin-left: 13vw;
+  }
+}
