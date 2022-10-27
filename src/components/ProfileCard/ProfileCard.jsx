@@ -19,7 +19,7 @@ const ProfileCard = (props) => {
   const handleViewProfileClick = (id) => {
     props.handleViewProfile(id, props.user.profile)
   }
-const avatarIds = [0,1,2,3,4,5,6,7,8]
+const avatarIds = [0,1,2,3,4,5,6,7]
 let currentAvatar = avatarIds[Math.floor(Math.random()*(avatarIds.length))]
 
 
