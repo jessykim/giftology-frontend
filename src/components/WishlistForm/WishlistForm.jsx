@@ -4,7 +4,10 @@ const WishlistForm = (props) => {
   return ( 
     <>
       <form onSubmit={props.handleSubmit} className={styles.container}>
-        <h1>New Wishlist</h1>
+        {props.editForm ?
+        <h1>Edit Wishlist</h1>
+        : <h1>New Wishlist</h1>
+}
         <label htmlFor="name-input" className={styles.label}>Name</label>
         <input
           required
@@ -27,7 +30,10 @@ const WishlistForm = (props) => {
           autoComplete="off"
           onChange={props.handleChange}
         />
-        <button type="submit" className={styles.button}>Add Wishlist</button>
+        {props.editForm ?
+        <button type="submit" className={styles.button}>Save Wishlist</button>
+        : <button type="submit" className={styles.button}>Add Wishlist</button>
+}
       </form>
     </>
   );
