@@ -9,21 +9,47 @@
 }
 
 .first {
-  background-image: url('../../../public/landing2.png');
+  background-image: url('../../../public/landing.jpg');
   background-position: top;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position-x: center;
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  justify-content: flex-end;
 }
 
-.welcomeStatement {
-
-  background-color: rgb(222,182,171, 0.70);
+.welcome {
+  font-size: 30px;
+  /* background-color: rgb(222,182,171, 0.70); */
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.statement {
+  text-align: center;
+  /* height: 200px; */
+}
+
+.statement > p {
+  padding: 20px;
+
+}
+
+.favlogo > img {
+  /* border: 1px solid red; */
+  margin: 0px;
+  border-radius: 0%;
+  width: 100px;
+  height: 100px;
+}
+
+
 
 /* .first img {
   position: absolute;
@@ -34,24 +60,24 @@
   height: 100%;
 } */
 
-.container {
+/* .container {
   padding: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  /* border: 2px black solid; */
+  border: 2px black solid;
   width: 100vw;
   z-index: 2;
   margin-top: 50vh;
-  /* height:40vh;
-  max-height: 500px; */
-}
+  height:40vh;
+  max-height: 500px;
+} */
 
-.welcomeStatement{
+/* .welcomeStatement{
   height: 40%;
   width: 100%;
-  /* border: 2px solid black; */
+  border: 2px solid black;
   text-align: center;
   display: flex;
   align-items: center;
@@ -59,19 +85,19 @@
   font-size: 25px;
   font-weight: bold;
   margin:10px 5px 20px 5px;
-}
+}  */
 
-.page img{
+/* .page img{
   position: absolute;
   display: block;
   margin-top: -5px;
   border-radius: 0;
   width: 100%;
   height: 100%;
-}
+} */
 
-.introduction{
-  /* border: 2px black solid; */
+/* .introduction{
+  border: 2px black solid;
   height: 60%;
   width: 100%;
   display: flex;
@@ -80,7 +106,7 @@
   font-size: 20px;
   text-align: center;
   margin: 20px 5px 10px 5px;
-}
+} */
 
 @media (max-width: 990px) {
   .container {
