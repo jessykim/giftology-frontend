@@ -1,22 +1,44 @@
-.container{
+.outerContainer{
   background-color: #EBD9DD;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   min-height: 95vh;
+  justify-content: center;
 }
 
-.container button{
-  background-color: white;
+.innerContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20vh;
+}
+
+.outerContainer .create {
+  width: 120px;
+  height: 30px;
+  margin: 10px auto;
+  border: 1px solid #AC7088;
   border-radius: 5px;
-  padding: 5px;
-  width:70px;
-  border: none;
-  font-size: 15px;
-  margin: 5px;
+  background-color: #AC7088;
+  cursor: pointer;
+  color: white;
 }
 
-.container .create{
-  background-color: #AC7088;
+.outerContainer .create:hover {
+  background-color: #eadde0;
+  color: #AC7088;
+}
+
+@media (min-width: 990px) {
+  .innerContainer {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .innerContainer .create {
+    position: absolute;
+    margin-top: -20vh;
+    margin-left: 13vw;
+  }
 }
