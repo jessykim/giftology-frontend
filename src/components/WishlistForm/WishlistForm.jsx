@@ -3,28 +3,31 @@ import styles from "./WishlistForm.module.css"
 const WishlistForm = (props) => {  
   return ( 
     <>
-      <form onSubmit={props.handleSubmit} className={styles.itemForm}>
-        <label htmlFor="name-input">Name</label>
+      <form onSubmit={props.handleSubmit} className={styles.container}>
+        <h1>New Wishlist</h1>
+        <label htmlFor="name-input" className={styles.label}>Name</label>
         <input
           required
           type="text"
           name="name"
           id="name-input"
           value={props.wishlistForm.name}
-          placeholder="Name"
+          placeholder="Birthday"
+          autoComplete="off"
           onChange={props.handleChange}
         />
-        <label htmlFor="description-input">Description</label>
+        <label htmlFor="description-input" className={styles.label}>Description</label>
 				<textarea
           required
           type="text"
           name="description"
           id="description-input"
           value={props.wishlistForm.description}
-          placeholder="Description"
+          placeholder="As y'all know, or should know, my bday is..."
+          autoComplete="off"
           onChange={props.handleChange}
         />
-        <button type="submit">SUBMIT</button>
+        <button type="submit" className={styles.button}>Add Wishlist</button>
       </form>
     </>
   );
