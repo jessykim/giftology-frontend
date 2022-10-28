@@ -26,6 +26,11 @@ const Landing = ({ user }) => {
           <img src="./note2.png" alt="company note" id={styles.note} />
         </div>
       </section>
+      <footer className={styles.footer} >
+        <div>
+          © 2022 MadeEZ, Inc.
+        </div>
+      </footer>
     </main>
   )
 }
