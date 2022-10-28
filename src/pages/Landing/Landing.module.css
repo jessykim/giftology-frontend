@@ -37,6 +37,7 @@ span {
   background-color: rgba(222, 182, 171, 0.445); 
   width: 100%;
   padding: 20px 0px;
+  font-weight: 700;
 }
 
 .favlogo > img {
