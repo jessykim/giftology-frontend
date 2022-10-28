@@ -35,7 +35,8 @@ const ItemCard = ({ item, wishlistId, handleDeleteItem, user, author }) => {
         </p>
         <div className={styles.purchased}>
         
-          <button className={styles.Btns}><a href={item.url}>Buy   🛒</a></button>
+          <a href={item.url} target="_blank" rel="noreferrer" className={styles.Btns}><button >Buy </button></a>
+          {/* 🛒 */}
         
         <div className={styles.purchasedInput}>
           <label htmlFor="purchased-input">Purchased</label>

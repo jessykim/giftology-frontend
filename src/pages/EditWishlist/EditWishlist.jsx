@@ -19,7 +19,7 @@ const EditWishlist = (props) => {
   return (
     <main className={styles.page}>
       <div className={styles.container}>
-        <WishlistForm handleUpdateWishlist={props.handleUpdateWishlist} wishlistForm={wishlistForm} handleChange={handleChange} handleSubmit={handleSubmit} />
+        <WishlistForm handleUpdateWishlist={props.handleUpdateWishlist} wishlistForm={wishlistForm} handleChange={handleChange} handleSubmit={handleSubmit} editForm={true}/>
       </div>
     </main>
   )
