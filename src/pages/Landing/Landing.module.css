@@ -120,7 +120,7 @@ span {
 
 @media only screen and (min-width: 912px) {
   .statement {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   #cursive {
@@ -138,24 +138,58 @@ span {
 
   .aboutTitle {
     height: 100px;
+    margin: 20px 0;
   }
 
   #cursive {
     height: 80%;
   }
+
+  .second {
+    width: 80%;
+  }
 }
 
-/* @media only screen and (max-width: 1200px) {
-  .testimonial {
-    height: 680px;
+@media only screen and (min-width: 1024px) {
+  .statement {
+    font-size: 60px;
+    padding: 20px 0;
+  }
+
+  .welcome {
+    height: 70%
+  }
+
+  .favlogo {
+    padding: 40px 0px 10px 0px
+  }
+
+  .favlogo > img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .second {
+    width: 70%; 
   }
 } 
 
-@media only screen and (max-width: 1024px) {
-  .about {
-    height: 420px;
+@media only screen and (min-width: 1200px) {
+  .statement {
+    font-size: 60px;
+    padding: 10px 0;
   }
-  .testimonial {
-    height: 580px;
+
+  .welcome {
+    height: 65%
   }
-}  */
+
+  .favlogo {
+    padding: 50px 0px 10px 0px
+  }
+
+  .favlogo > img {
+    width: 160px;
+    height: 160px;
+  }
+} 
